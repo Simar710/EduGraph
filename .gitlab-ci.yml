@@ -1,0 +1,31 @@
+stages:
+  - deploy
+  - test
+
+deploy:
+  stage: deploy
+  script:
+    - "git pull origin $CI_COMMIT_REF_NAME"
+    - "COMMIT_HASH=$(git rev-parse HEAD)"
+    - "COMMIT_MESSAGE=$(git log --format=%B -n 1 $COMMIT_HASH)"
+    - "CURRENT_BRANCH=$CI_COMMIT_REF_NAME"
+    - "CHANGES=$(git diff --name-only HEAD^..HEAD ~/builds/mC5sdKVSv/0/cis3760_f23/f23_cis3760_101/sprint9/sprint9-files/html)"
+
+    - >
+      if [ "$CURRENT_BRANCH" != "sprint9" ]; then
+        echo "No changes on sprint9 branch"
+      elif [ -z "$CHANGES" ]; then
+        echo "No changes in the HTML folder. Commit message: $COMMIT_MESSAGE" 
+      else
+        sudo chmod +w /var/www/html
+        sudo cp -R ~/builds/mC5sdKVSv/0/cis3760_f23/f23_cis3760_101/sprint9/sprint9-files/html/* /var/www/html/
+        echo "Commit Deployed: $COMMIT_HASH - $COMMIT_MESSAGE"
+      fi
+
+test:
+  stage: test
+  script: 
+    - cd
+    - cd ~/builds/mC5sdKVSv/0/cis3760_f23/f23_cis3760_101/sprint9/sprint9_docs/Testing-UI
+    - sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless,--disable-gpu, --disable-dev-shm-usage] browserName=chrome" Sprint7.side
+    - sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless,--disable-gpu, --disable-dev-shm-usage] browserName=chrome" Tree_Generator.side

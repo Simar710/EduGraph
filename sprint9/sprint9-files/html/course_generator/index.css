@@ -1,0 +1,247 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+button {
+  cursor: pointer;
+}
+
+#courseGenerator button, #addCourse button{
+  margin-top: 50px;
+}
+
+.home {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-home {
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+  background-color: white;
+}
+
+.btn-home:hover {
+  opacity: 0.5;
+}
+
+.jumbotron {
+  background-color: #9DBF9E;
+  color: #fff;
+  padding: 80px;
+}
+
+.input-course-container {
+  background-color: #9DBF9E;
+  color: #fff;
+  padding: 80px;
+}
+
+.generate-course-container {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 80px;
+}
+.jumbotron h1 {
+  padding-bottom: 20px;
+}
+
+.jumbotron p {
+  font-size: 20px;
+}
+
+.detail-heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10px;
+  /* Adjust the value according to your preference */
+}
+
+.btn-primary {
+  width: 200px;
+  /* Adjust the width according to your preference */
+}
+
+.text-center a {
+  margin-top: 50px;
+}
+
+.input-course-container h2 {
+  margin-top: 25px;
+}
+
+#addCourse h2 {
+  text-align: left;
+  font-size: larger;
+}
+
+#addCourse .enteredCoursesList {
+  text-align: left;
+}
+
+#recommended-courses-list {
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 30px;
+}
+
+.courseDetails p {
+  text-align: left;
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+#genTreeBtn {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.delete-course-btn {
+  background-color: #ff0000;
+  color: #ffffff;
+  font-size: 8px; 
+}
+
+/* Styles for light mode */
+body.light-mode {
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Styles for dark mode */
+body.dark-mode {
+  background-color: #212121; 
+  color: #F2F1F2; 
+}
+
+body.dark-mode .lc-block .btn {
+  background-color: #3c3c3c; 
+  color: #FFFFFF; 
+  border: 2px solid #ABAAA9; 
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .lc-block .btn:hover {
+  opacity: 0.6; 
+}
+
+body.dark-mode .btn-home {
+  background-color: #5c5b5b;
+  color: #ffffff;
+}
+
+body.dark-mode .jumbotron {
+
+  background-color: #313030; 
+  color: #FFFFFF; 
+  border: 1px solid #ABAAA9; 
+  border-radius: 3px;
+  transition: all 0.3s ease;
+
+
+}
+
+/* CSS for toggle switch and icons */
+.switch {
+  position: relative;
+  margin-left: 5%;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  transition: background-color 0.3s ease;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+input:checked+.slider {
+  background-color: #bad3ee;
+  /* Change color for active state */
+}
+
+input:checked+.slider:before {
+  transform: translateX(26px);
+  /* Move the toggle circle */
+}
+
+/* Style for moon and sun icons */
+.fa-moon,
+.fa-sun {
+  position: absolute;
+  font-size: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: opacity 0.3s ease;
+}
+
+.fa-moon {
+  right: 5px;
+  opacity: 1;
+  color: #1a1a1a;
+
+}
+
+.fa-sun {
+  left: 5px;
+  opacity: 0;
+  color: #f1c40f;
+}
+
+input:checked+.slider .fa-moon {
+  opacity: 0;
+}
+
+input:checked+.slider .fa-sun {
+  opacity: 1;
+}
+
+.home {
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn-home {
+  border-radius: 5px;
+  font-size: 12px;
+  cursor: pointer;
+  padding: 5px;
+  background-color: white;
+}
+
+.btn-home:hover {
+  opacity: 0.5;
+}

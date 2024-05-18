@@ -1,0 +1,67 @@
+h1 {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+}
+
+body {
+    background-color: #eadefa;
+    font-family: 'Playfair Display', serif;
+    line-height: 1.5;
+}
+
+p{
+    font-size: 15px;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Merriweather', serif;
+}
+
+.photo{
+    width: 300px;
+    height: 400px;
+}
+
+.text-container{
+    background-color: #ebe1fa; 
+    border: 1px solid #000;
+    border-radius: 50px;
+    margin: 0 auto; 
+    padding: 10px;
+    width: 80%;
+    
+}
+
+.photo-container{
+    display: flex;
+    padding: 50px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.emily-img {
+    border-radius: 150px;
+    border: 3px solid #000;
+    transform: scale(0.6);
+    margin-top: -125px;
+    margin-bottom: -100px;
+}
+
+.home {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.btn {
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: white;
+}
+
+.btn:hover {
+    opacity: 0.5;
+}

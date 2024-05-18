@@ -1,0 +1,84 @@
+{
+  "id": "55310512-66e6-4997-bbc1-3f63a6ce2072",
+  "version": "2.0",
+  "name": "All_course_Tree",
+  "url": "https://cis3760f23-01.socs.uoguelph.ca",
+  "tests": [{
+    "id": "34405da5-0590-4784-901b-17c0871d63f0",
+    "name": "Generate All Course Tree",
+    "commands": [{
+      "id": "d0ca4b68-c991-48b1-8e54-9a8675c011da",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "67c3a233-a41a-4a6c-8264-b1b0cdd04f2c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1140x952",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6e46974e-0635-4d1b-bdf7-f8f5be89ce69",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lc-block:nth-child(3) > .btn",
+      "targets": [
+        ["linkText=Start Now!", "linkText"],
+        ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
+        ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2e6ba63d-7cb3-4450-95f3-d5e5a6f969cf",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["linkText=Generate Course Tree", "linkText"],
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Generate Course Tree')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeBtn']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/course_generator/genTree')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1c375497-7a77-4245-b14d-bbc8dc69e0be",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtnAll > .btn",
+      "targets": [
+        ["css=#genTreeBtnAll > .btn", "css:finder"],
+        ["xpath=//div[@id='genTreeBtnAll']/button", "xpath:idRelative"],
+        ["xpath=//div[3]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generate All Courses Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "764c20f6-c548-4289-9d5e-f60fa973ad83",
+      "comment": "",
+      "command": "pause",
+      "target": "240000",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "4a4366cd-da10-467b-8a5e-7ac03939f140",
+    "name": "GenerateAllCourse",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["34405da5-0590-4784-901b-17c0871d63f0"]
+  }],
+  "urls": ["https://cis3760f23-01.socs.uoguelph.ca/"],
+  "plugins": []
+}

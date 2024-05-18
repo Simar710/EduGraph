@@ -1,0 +1,514 @@
+{
+  "id": "154c8660-7274-4360-be80-8e8a024549dd",
+  "version": "2.0",
+  "name": "Tree_Generator",
+  "url": "https://cis3760f23-01.socs.uoguelph.ca/",
+  "tests": [{
+    "id": "86db9209-3692-4bf1-98b0-9ac95fd8056f",
+    "name": "Generate Tree for one Subject",
+    "commands": [{
+      "id": "adc7429f-c95d-4c70-ad0e-7d3cbb0c20b3",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5348ffc9-d081-4b53-bb52-6787a56a7057",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lc-block:nth-child(3) > .btn",
+      "targets": [
+        ["linkText=Start Now!", "linkText"],
+        ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
+        ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ab41cbd4-ef70-411f-bb17-19e19b962cce",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["linkText=Generate Course Tree", "linkText"],
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Generate Course Tree')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeBtn']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/course_generator/genTree')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "451f3e99-4a38-41a6-a6f9-d7a391d87c7e",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div[@id='genTreeDropdown']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8230ab42-8020-4651-8dbb-394f93060e38",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fac1540b-05c8-41cc-af3c-31bf59f717e3",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-item:nth-child(1)",
+      "targets": [
+        ["linkText=ACCT", "linkText"],
+        ["css=.dropdown-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'ACCT')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeDropdown']/div/a", "xpath:idRelative"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ACCT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fd4289a7-61b5-41fd-9151-d3118cc492d9",
+      "comment": "",
+      "command": "click",
+      "target": "id=genTreeBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b387d865-3685-4435-9387-2b164ade02d0",
+      "comment": "",
+      "command": "click",
+      "target": "id=genTreeBtn",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4129cb86-bc0c-44dc-a9bf-f35160b4de16",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.scrollBy(0,1000)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "99ee8fd5-931b-4041-ae49-281749311827",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d865bd72-8106-4f03-affb-9b3ac96376ac",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "60d32d3a-e367-4a46-acb7-ee9342f4e400",
+    "name": "Download Tree",
+    "commands": [{
+      "id": "127f1c46-4330-4685-b69b-377367781067",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bffaaf05-3ffc-4a84-a17e-6449bca81c9e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lc-block:nth-child(3) > .btn",
+      "targets": [
+        ["linkText=Start Now!", "linkText"],
+        ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
+        ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fb768e04-aca7-4991-9e91-9b6b3fdb1dd5",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["linkText=Generate Course Tree", "linkText"],
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Generate Course Tree')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeBtn']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/course_generator/genTree')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "aee2d2ce-4f7f-4122-82ca-769134f0f226",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div[@id='genTreeDropdown']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "db3936d4-ea1b-4b4f-9bdd-07bac7f56162",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-item:nth-child(1)",
+      "targets": [
+        ["linkText=ACCT", "linkText"],
+        ["css=.dropdown-item:nth-child(1)", "css:finder"],
+        ["xpath=//a[contains(text(),'ACCT')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeDropdown']/div/a", "xpath:idRelative"],
+        ["xpath=//div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'ACCT')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "455ba400-d25f-4829-ae98-e44c60067993",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//div[@id='genTreeBtn']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0411dbc3-a189-4b30-ac9f-a096e4163629",
+      "comment": "",
+      "command": "click",
+      "target": "css=#download > .btn",
+      "targets": [
+        ["css=#download > .btn", "css:finder"],
+        ["xpath=//div[@id='download']/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Download Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d0b07b1c-3180-4615-8a0d-a54f9af924a7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#download > .btn",
+      "targets": [
+        ["css=#download > .btn", "css:finder"],
+        ["xpath=//div[@id='download']/button", "xpath:idRelative"],
+        ["xpath=//div[4]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Download Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "ec271ee9-73ac-43fb-90b8-481887d15d91",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "39d29e0c-282d-48e3-9773-72f8666c957f",
+    "name": "Search a subject (CIS*1050)",
+    "commands": [{
+      "id": "4edbaf6d-d493-4684-8760-1246427f5610",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e936a58-e4de-44ee-802d-6bd420809de4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lc-block:nth-child(3) > .btn",
+      "targets": [
+        ["linkText=Start Now!", "linkText"],
+        ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
+        ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "bee94046-cfc9-48ed-9ccf-c83533e909d7",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["linkText=Generate Course Tree", "linkText"],
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Generate Course Tree')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeBtn']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/course_generator/genTree')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5c4112aa-07c4-485c-9ff5-c7b9d6dc685e",
+      "comment": "",
+      "command": "click",
+      "target": "id=dropdownMenuButton",
+      "targets": [
+        ["id=dropdownMenuButton", "id"],
+        ["css=#dropdownMenuButton", "css:finder"],
+        ["xpath=//button[@id='dropdownMenuButton']", "xpath:attributes"],
+        ["xpath=//div[@id='genTreeDropdown']/button", "xpath:idRelative"],
+        ["xpath=//div/button", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1aa6b644-8de1-4dad-9d7e-dab1f33b49e9",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb53adf7-1daa-470e-a870-aa3e1c0f0f26",
+      "comment": "",
+      "command": "click",
+      "target": "css=.dropdown-item:nth-child(18)",
+      "targets": [
+        ["linkText=CIS", "linkText"],
+        ["css=.dropdown-item:nth-child(18)", "css:finder"],
+        ["xpath=//a[contains(text(),'CIS')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeDropdown']/div/a[18]", "xpath:idRelative"],
+        ["xpath=//a[18]", "xpath:position"],
+        ["xpath=//a[contains(.,'CIS')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f1bdfbc0-3b09-4c40-92a1-6ba4115af31b",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//div[@id='genTreeBtn']/button", "xpath:idRelative"],
+        ["xpath=//div[2]/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9dde3e24-e1c9-47f7-86e4-001c1ec5eebe",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "33784715-87ad-48d4-bdd2-12eed20c6755",
+      "comment": "",
+      "command": "type",
+      "target": "id=searchInput",
+      "targets": [
+        ["id=searchInput", "id"],
+        ["css=#searchInput", "css:finder"],
+        ["xpath=//input[@id='searchInput']", "xpath:attributes"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": "CIS*1050"
+    }, {
+      "id": "35cbd607-07e2-4d77-b8c4-c58b80d4e46f",
+      "comment": "",
+      "command": "click",
+      "target": "id=searchBtn",
+      "targets": [
+        ["id=searchBtn", "id"],
+        ["css=#searchBtn", "css:finder"],
+        ["xpath=//button[@id='searchBtn']", "xpath:attributes"],
+        ["xpath=//div[4]/div/div/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "f0a898a5-cf18-42fb-86f9-e473f806700d",
+      "comment": "",
+      "command": "executeScript",
+      "target": "window.scrollBy(0,1000)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "0e2c2b78-0692-4747-9af7-e404f1e59234",
+      "comment": "",
+      "command": "pause",
+      "target": "3000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c9c240c4-c759-49cb-aa29-ac43ec27511b",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "3350a429-eaab-430f-8ca8-7b6f75ade136",
+    "name": "Turn on Dark Mode",
+    "commands": [{
+      "id": "a26d01d1-89db-4f67-993d-32dfd6678dde",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d2b897e0-9946-4851-bf85-77ab62146a22",
+      "comment": "",
+      "command": "click",
+      "target": "css=.lc-block:nth-child(3) > .btn",
+      "targets": [
+        ["linkText=Start Now!", "linkText"],
+        ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
+        ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "03dc8f71-3a23-46b0-b08f-efe95e6e4842",
+      "comment": "",
+      "command": "click",
+      "target": "css=#genTreeBtn > .btn",
+      "targets": [
+        ["linkText=Generate Course Tree", "linkText"],
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Generate Course Tree')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeBtn']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/course_generator/genTree')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db59f0ee-ec10-4f1b-b1e7-f96df571b481",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-moon",
+      "targets": [
+        ["css=.fa-sun", "css:finder"],
+        ["xpath=//section[@id='hero-main']/label/span/span/i[2]", "xpath:idRelative"],
+        ["xpath=//i[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "733040c5-6f9e-4c46-bc84-2d7937c60c52",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "84a7a95e-ee68-4e5c-a2be-bdcf1c9436f3",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "535dadec-aa17-40b2-be37-7dc8b632742c",
+    "name": "Turn on Light Mode",
+    "commands": [{
+      "id": "0c4219ce-6b22-434e-bd2b-b6f0b86ca119",
+      "comment": "",
+      "command": "open",
+      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "dc865117-5400-4e18-bb32-c36c0c468619",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Start Now!",
+      "targets": [
+        ["linkText=Start Now!", "linkText"],
+        ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
+        ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
+        ["xpath=//div[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dda901b3-f3f3-45fc-91c0-7d11b1fe1f61",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Generate Course Tree",
+      "targets": [
+        ["linkText=Generate Course Tree", "linkText"],
+        ["css=#genTreeBtn > .btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Generate Course Tree')]", "xpath:link"],
+        ["xpath=//div[@id='genTreeBtn']/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/course_generator/genTree')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Generate Course Tree')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8535b3ab-b778-42d9-bec6-927467488c59",
+      "comment": "",
+      "command": "click",
+      "target": "css=.fa-sun",
+      "targets": [
+        ["css=.slider", "css:finder"],
+        ["xpath=//span", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "229c64db-8cc4-478d-a77d-ca488591b150",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4e62c214-6eac-486e-ba67-efefc6aaf356",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "53060573-d65a-426f-b94d-89a20625235f",
+    "name": "Tree Generator - Part 1",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["60d32d3a-e367-4a46-acb7-ee9342f4e400", "86db9209-3692-4bf1-98b0-9ac95fd8056f", "39d29e0c-282d-48e3-9773-72f8666c957f", "3350a429-eaab-430f-8ca8-7b6f75ade136"]
+  }],
+  "urls": ["https://cis3760f23-01.socs.uoguelph.ca/"],
+  "plugins": []
+}
