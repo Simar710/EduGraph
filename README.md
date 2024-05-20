@@ -1,48 +1,15 @@
 ### Please have a look at other branches as well. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
+### Project: EduGraph
 
-# F23_CIS3760_101
 
-# Team
+### 1. **Course Data Management:**
+   - Developed a Python-based CLI for parsing and searching course information, generating Excel outputs, and documenting sprint progress (Sprint 1 & 2).
+   - Designed an Excel UI with VBA scripts to assess student eligibility for courses based on completed coursework (Sprint 2).
 
--   Team Lead:
-    -   Emily Kozatchiner
--   Team Members:
-    -   Sara Adi
-    -   Fee Kim Ah-Poa
-    -   Simardeep Singh
-    -   Maneesh Wijewardhana
+### 2. **Web and Database Integration:**
+   - Created a web interface for downloading course data and viewing team member pages; enhanced with a MySQL database and PHP REST API for course data manipulation (Sprint 3 & 4).
+   - Improved API endpoints, refactored code, and enhanced UI responsiveness and accessibility using Bootstrap; implemented automated testing (Sprint 5 & 7).
 
-## Current Sprint
-
-Sprint 9
-
-## Description
-
-**Project Overview**
-
-In Sprint 9 for F23 CIS\*3760, our team will be implement different wrap-up functionalities to clean up the website and ensure that it will be the best version of itself that it can. We will work on the following as a team:
--   Implement a CI/CD pipeline for testing and ensure that new additions from hence-forth are implemented with continous integration
--   Implementing graphing by a singular course rather than subject
-
-## Team Approach
-
--   The whole team will ensure the clean-up of the site and wrap up functionality of course generator.
-<!-- -   Simar will create tasks, lead group meetings, and ensure everyone is okay with what tasks they are working on this sprint
-    -   Will develop user stories/test cases and Implement dark mode.
--   Sara, Fee, Maneesh and Emily will work in team programming format and work together on following tasks.
-    -   Identify Nodes and Build Tree structure using the chosen javascript library.
-    -   Build UI Design and Tree Design
-    -   Display tree to the frontend and improve UI design, if necessary
-    -   Write use stories and test cases. -->
-
-## Authors and acknowledgment
-
-    - Sara Adi
-    - Emily Kozatchiner
-    - Fee Kim Ah-Poa
-    - Maneesh K. Wijewardhana
-    - Simardeep Singh
-
-## Project status
-
-In-Progress
+### 3. **Advanced Features and Optimization:**
+   - Developed a web application for course recommendations based on past coursework, utilizing external APIs (Sprint 6).
+   - Implemented course prerequisite graphs, dark mode, and optimized website performance; established a CI/CD pipeline for continuous integration and testing (Sprint 8 & 9).
