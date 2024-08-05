@@ -1,5 +1,10 @@
-### Please have a look at other branches as well. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
+### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
 ### Project: EduGraph
+
+   ### Summary:
+   -   Created a web application with team.
+   -   Parsed the data into csv using python, developed a Python-based CLI and Excel UI using VBA.
+   -   Stored the data in a MySQL database and architect the PHP REST APIs, featuring PHP web applications for course recommendations, prerequisite graphs, hosted using Nginx and a CI/CD pipeline for enhanced functionality and reliability.
 
 
 ### 1. **Course Data Management:**
