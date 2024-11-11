@@ -2,7 +2,7 @@
   "id": "7454817a-c6b3-4ad9-9c38-1367e6a9f760",
   "version": "2.0",
   "name": "Sprint7",
-  "url": "https://cis3760f23-01.socs.uoguelph.ca",
+  "url": "http://localhost:8082",
   "tests": [{
     "id": "1a559280-a4a6-47be-8c2b-ad07dff8c27c",
     "name": "Homepage - api doc",
@@ -1130,6 +1130,6 @@
     "timeout": 300,
     "tests": ["e24e600d-5199-41ed-afc0-d6b47ac506a3", "f09aa28b-f01b-4660-9f15-54ede3a82c8f"]
   }],
-  "urls": ["https://cis3760f23-01.socs.uoguelph.ca/"],
+  "urls": ["http://localhost:8082/"],
   "plugins": []
 }

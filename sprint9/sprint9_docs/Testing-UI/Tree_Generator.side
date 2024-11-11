@@ -2,7 +2,7 @@
   "id": "154c8660-7274-4360-be80-8e8a024549dd",
   "version": "2.0",
   "name": "Tree_Generator",
-  "url": "https://cis3760f23-01.socs.uoguelph.ca/",
+  "url": "http://localhost:8082/",
   "tests": [{
     "id": "86db9209-3692-4bf1-98b0-9ac95fd8056f",
     "name": "Generate Tree for one Subject",
@@ -10,7 +10,7 @@
       "id": "adc7429f-c95d-4c70-ad0e-7d3cbb0c20b3",
       "comment": "",
       "command": "open",
-      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "target": "http://localhost:8082/",
       "targets": [],
       "value": ""
     }, {
@@ -120,7 +120,7 @@
       "id": "127f1c46-4330-4685-b69b-377367781067",
       "comment": "",
       "command": "open",
-      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "target": "http://localhost:8082/",
       "targets": [],
       "value": ""
     }, {
@@ -231,7 +231,7 @@
       "id": "4edbaf6d-d493-4684-8760-1246427f5610",
       "comment": "",
       "command": "open",
-      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "target": "http://localhost:8082/",
       "targets": [],
       "value": ""
     }, {
@@ -376,7 +376,7 @@
       "id": "a26d01d1-89db-4f67-993d-32dfd6678dde",
       "comment": "",
       "command": "open",
-      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "target": "http://localhost:8082/",
       "targets": [],
       "value": ""
     }, {
@@ -442,7 +442,7 @@
       "id": "0c4219ce-6b22-434e-bd2b-b6f0b86ca119",
       "comment": "",
       "command": "open",
-      "target": "https://cis3760f23-01.socs.uoguelph.ca/",
+      "target": "http://localhost:8082/",
       "targets": [],
       "value": ""
     }, {
@@ -509,6 +509,6 @@
     "timeout": 300,
     "tests": ["60d32d3a-e367-4a46-acb7-ee9342f4e400", "86db9209-3692-4bf1-98b0-9ac95fd8056f", "39d29e0c-282d-48e3-9773-72f8666c957f", "3350a429-eaab-430f-8ca8-7b6f75ade136"]
   }],
-  "urls": ["https://cis3760f23-01.socs.uoguelph.ca/"],
+  "urls": ["http://localhost:8082/"],
   "plugins": []
 }
