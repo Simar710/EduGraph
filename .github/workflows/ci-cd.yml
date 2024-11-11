@@ -49,6 +49,6 @@ jobs:
 
     - name: Run tests
       run: |
-        cd /home/ubuntu/EduGraph/sprint9/sprint9_docs/Testing-UI
+        cd sprint9/sprint9_docs/Testing-UI
         sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless, --disable-gpu, --disable-dev-shm-usage]" browserName=chrome Sprint7.side
         sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless, --disable-gpu, --disable-dev-shm-usage]" browserName=chrome Tree_Generator.side
