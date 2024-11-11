@@ -1,0 +1,57 @@
+name: CI/CD Pipeline
+
+# Trigger workflow on push to 'sprint9' branch
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest  # Use a GitHub-hosted runner with Ubuntu
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Get commit information
+        run: |
+          COMMIT_HASH=$(git rev-parse HEAD)
+          COMMIT_MESSAGE=$(git log --format=%B -n 1 $COMMIT_HASH)
+          CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
+          CHANGES=$(git diff --name-only HEAD^..HEAD ./sprint9/sprint9-files/html)
+          echo "COMMIT_HASH=$COMMIT_HASH" >> $GITHUB_ENV
+          echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
+          echo "CURRENT_BRANCH=$CURRENT_BRANCH" >> $GITHUB_ENV
+          echo "CHANGES=$CHANGES" >> $GITHUB_ENV
+
+      - name: Deploy to server
+        run: |
+          if [ "$CURRENT_BRANCH" != "sprint9" ]; then
+            echo "No changes on sprint9 branch"
+          elif [ -z "$CHANGES" ]; then
+            echo "No changes in the HTML folder. Commit message: $COMMIT_MESSAGE"
+          else
+            echo "Deploying commit $COMMIT_HASH - $COMMIT_MESSAGE"
+            sudo chmod +w /var/www/html
+            sudo cp -R ./sprint9/sprint9-files/html/* /var/www/html/
+            echo "Commit Deployed: $COMMIT_HASH - $COMMIT_MESSAGE"
+          fi
+
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y selenium-side-runner
+          sudo apt-get install -y chromium-browser
+
+      - name: Run UI Tests with Selenium
+        run: |
+          sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless,--disable-gpu, --disable-dev-shm-usage] browserName=chrome" ./sprint9/sprint9_docs/Testing-UI/Sprint7.side
+          sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless,--disable-gpu, --disable-dev-shm-usage] browserName=chrome" ./sprint9/sprint9_docs/Testing-UI/Tree_Generator.side

@@ -1,3 +1,6 @@
+<style>
+    <?php include "index.css" ?>
+</style>
 <?php
 // Set the content type to HTML
 header('Content-Type: text/html; charset=UTF-8');
@@ -30,7 +33,6 @@ $html = <<<HTML
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -93,7 +95,7 @@ $html = <<<HTML
                 <div class="col-10 col-sm-8 col-lg-6">
                     <div class="lc-block d-grid gap-2 d-md-flex flex-md-column justify-content-md-start">
                          <a class="btn btn-dark px-4 me-md-2" aria-label="Download File" href="parsed_courses.xlsm"  download class="download-button" role="button">Download .xlsm Course File</a>
-                        <a class="btn btn-outline-secondary px-4 search-info-btn" aria-label="API Documentation" href="apidocs" role="button">API Documentation</a>
+                        <a class="btn btn-outline-secondary px-4 search-info-btn" aria-label="API Documentation" href="/apidocs" role="button">API Documentation</a>
                     </div>
                 </div>
                 <div class="col-lg-6">

@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $apiUrl = "https://cis3760f23-01.socs.uoguelph.ca/courses/getCourseByCode/";
+    $apiUrl = "http://localhost:8082/courses/getCourseByCode/";
     $postData = json_encode(["courseCode" => $courseCode]);
 
     $options = [

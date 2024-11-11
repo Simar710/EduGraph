@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="https://unpkg.com/vis-network/standalone/umd/vis-network.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="index.css">
+    <style>
+      <?php include "index.css" ?>
+    </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -140,7 +142,7 @@
     }
 
     async function getSubjects() {
-      const response = await fetch("https://cis3760f23-01.socs.uoguelph.ca/courses/getSubjects/", {
+      const response = await fetch("http://localhost:8082/courses/getSubjects/", {
         method: "GET",
         mode: "cors",
         headers: {
@@ -151,7 +153,7 @@
     }
 
     async function getAllCourses() {
-      const response = await fetch("https://cis3760f23-01.socs.uoguelph.ca/courses/getAllCourses/", {
+      const response = await fetch("http://localhost:8082/courses/getAllCourses/", {
         method: "GET",
         mode: "cors",        headers: {
           "Content-Type": "application/json"
@@ -161,7 +163,7 @@
     }
 
     async function buildChartData(courseId) {
-      const courses = await fetch("https://cis3760f23-01.socs.uoguelph.ca/courses/getCoursesByPrereq/", {
+      const courses = await fetch("http://localhost:8082/courses/getCoursesByPrereq/", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -247,7 +249,7 @@
       dropdownMenu.addEventListener("click", async function(e) {
         genTreeCourses = []
         const subject = e.target.innerText;
-        const response = await fetch("https://cis3760f23-01.socs.uoguelph.ca/courses/getCoursesBySubject/", {
+        const response = await fetch("http://localhost:8082/courses/getCoursesBySubject/", {
           method: "POST",
           mode: "cors",
           headers: {
@@ -485,4 +487,3 @@
   </script>
 </body>
 </html>
-
