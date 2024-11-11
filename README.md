@@ -1,9 +1,27 @@
+# Intro and Set Up
+### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
+### Project: EduGraph
+
+   ### Summary:
+   -   Created a web application with team.
+   -   Parsed the data into csv using python, developed a Python-based CLI and Excel UI using VBA.
+   -   Stored the data in a MySQL database and architect the PHP REST APIs, featuring PHP web applications for course recommendations, prerequisite graphs, hosted using Nginx and a CI/CD pipeline for enhanced functionality and reliability.
+  ### 1. **Course Data Management:**
+     - Developed a Python-based CLI for parsing and searching course information, generating Excel outputs, and documenting sprint progress (Sprint 1 & 2).
+     - Designed an Excel UI with VBA scripts to assess student eligibility for courses based on completed coursework (Sprint 2).
+
+  ### 2. **Web and Database Integration:**
+     - Created a web interface for downloading course data and viewing team member pages; enhanced with a MySQL database and PHP REST API for course data manipulation (Sprint 3 & 4).
+     - Improved API endpoints, refactored code, and enhanced UI responsiveness and accessibility using Bootstrap; implemented automated testing (Sprint 5 & 7).
+
+  ### 3. **Advanced Features and Optimization:**
+     - Developed a web application for course recommendations based on past coursework, utilizing external APIs (Sprint 6).
+     - Implemented course prerequisite graphs, dark mode, and optimized website performance; established a CI/CD pipeline for continuous integration and testing (Sprint 8 & 9).
+     
 # Setting up MySQL, PHP, and NGINX on MacOS
-
-## Note: YOU NEED HOMEBREW FOR ALL OF THIS
-## Note2: IF ON LINUX, STEPS ARE SIMILAR EXCEPT FOR THE PATHS AND PACKAGE MANAGER COMMANDS
-
-## Note3: IF YOU ARE ON AN INTEL MAC, THE PATH `/opt/homebrew` WILL NOT EXIST, IT IS `/usr/local` INSTEAD
+### Note: YOU NEED HOMEBREW FOR ALL OF THIS
+### Note2: IF ON LINUX, STEPS ARE SIMILAR EXCEPT FOR THE PATHS AND PACKAGE MANAGER COMMANDS
+### Note3: IF YOU ARE ON AN INTEL MAC, THE PATH `/opt/homebrew` WILL NOT EXIST, IT IS `/usr/local` INSTEAD
 
 ### Set up MySQL
 
@@ -74,6 +92,8 @@ IGNORE 1 ROWS;
 
 ```nginx
 events {
+    # This can be left empty or configured with additional directives
+    worker_connections 1024; # Example setting for handling connections
 }
 
 http {
@@ -81,43 +101,130 @@ http {
         listen 8082;
         root /opt/homebrew/var/www/html;
 
-        index index.php;
-        location / {
-          include  /opt/homebrew/etc/nginx/mime.types;
-          try_files $uri $uri/ /index.php;
-        }
+        index index.php index.html index.htm;
+
         location /courses/getAllCourses/ {
-          try_files $uri $uri/ /get_all_courses.php;
+            try_files $uri $uri/ /get_all_courses.php;
         }
-        location ~ \.php$ {
-          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-          fastcgi_index server.php;
+
+        location /course_generator {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+        location /course_generator/genTree {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location /simar {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location /sara {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location /emily {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location /feekim {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location /maneesh {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location / {
+          # First attempt to serve request as file, then
+          # as directory, then fall back to displaying a 404.
+          try_files $uri $uri/ /404/index.php;
+        }
+
+        location /courses/getAllCoursesCopy/ {
+          try_files $uri $uri/ /get_all_courses_copy.php;
+        }
+		
+        location /courses/getSubjects/ {
+          try_files $uri $uri/ /get_subjects.php;
+        }
+
+	      location /courses/getCoursesByPrereq/ {
+          try_files $uri $uri/ /get_courses_by_prereq.php?$args;
+        }
+	
+        location /courses/getCoursesByRestrictions/ {
+          try_files $uri $uri/ /get_courses_by_restrict.php?$args;
+        }
+
+		    location /courses/getCoursesBySubject/ {
+          try_files $uri $uri/ /get_courses_by_subject.php?$args;
+        }
+	
+        location /courses/getCourseByCode/ {
+          try_files $uri $uri/ /get_course_by_code.php?$args;
+        }
+
+        location /courses/getCourseByName/ {
+          try_files $uri $uri/ /get_course_by_name.php?$args;
+        }
+
+        location ~ /courses/postCourses/ {
+          try_files $uri $uri/ /post_courses.php;
+          fastcgi_param REQUEST_METHOD $request_method;
           include fastcgi_params;
           fastcgi_pass 127.0.0.1:9000;
-          fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        }
+
+	      location ~ /courses/update/ {
+          try_files $uri $uri/ /put_dbInfo.php;  
+          fastcgi_param REQUEST_METHOD $request_method;
+          include fastcgi_params;
+          fastcgi_pass 127.0.0.1:9000;
+        }
+
+	      location ~ /courses/delete/ {
+          try_files $uri $uri/ /delete_course_by_code.php;
+          fastcgi_param REQUEST_METHOD $request_method;
+          include fastcgi_params;
+          fastcgi_pass 127.0.0.1:9000;
+        }
+        
+	      location /apidocs {
+          try_files $uri $uri/ /apidocs.php;
+        }
+    
+        location ~ \.php$ {
+            fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+            fastcgi_index index.php;
+            include fastcgi_params;
+            fastcgi_pass 127.0.0.1:9000;
+            fastcgi_split_path_info ^(.+\.php)(/.+)$;
         }
     }
 }
 ```
 
-4. Navigate to our cis3760 repo, make sure you are up to date on the sprint4 branch
-5. Copy the html folder from the sprint4 files into `/opt/homebrew/var/www/` or `/usr/local/var/www/` on intel by doing `cp -r html /opt/homebrew/var/www/`
+4. Make sure you are up to date on the main branch
+5. Copy the html folder from the sprint9 files into `/opt/homebrew/var/www/` or `/usr/local/var/www/` on intel by doing `cp -r html /opt/homebrew/var/www/`
     - It contains a new file called `db_connection.php` that defines two functions, one that opens the db connection and one that closes it
-    - It also contains a file called `get_all_courses.php` which just calls our open connection function inside `db_connection.php`
+    - It also contains a file called `get_all_courses.php` which just calls the open connection function inside `db_connection.php`
 6. Run `sudo nginx -t` and make sure there are no errors
 7. Run `brew services reload nginx`
-8. You _should_ be able to navigate to and see our page
-9. You _should_ also be able to navigate to http://localhost:8080/courses/getAllCourses/ and see "Connected Successfully" meaning our mysql db connection worked!
+8. You _should_ be able to navigate to and see the page
+9. You _should_ also be able to navigate to http://localhost:8082/courses/getAllCourses/ and see "Connected Successfully" meaning the mysql db connection worked!
 
--   On the real VM, we would just have to change the mysql connection url. (probably more stuff I am forgetting)
-    -   To access MySQL on the VM, run `mysql -u cis3760 -p` and then enter `pass1234` when asked
--   The `db_connection.php` and `get_all_courses` scripts are already on the server with the nginx config edited similar to the local one so https://cis3760f23-01.socs.uoguelph.ca/courses/getAllCourses/ will work
 -   **NOTE**: When you create php files, use snake_case and then the corresponding endpoint in nginx should be camelCase (keeps everything consistent)
-
-### Development Strategy
-
--   Write and test everything locally first before pushing to sprint4 branch
--   **IMPORTANT**: If you made nginx changes, remember that the nginx on the VM is configured differently than local so do not push your local nginx config to the repo, just push any changes you made in the html directory once it worked locally as they are the same on the VM (apart from some variables referencing localhost, but you will change that on the VM itself)
-    -   On the VM, you will have to do some live coding if the nginx config needed to be changed locally. Just edit it on the server making sure to add the changes properly. Usually these changes will be in `/etc/nginx/sites-available/3760Website` You can run `sudo nginx -t` to verify the config files after saving them then run `sudo systemctl restart nginx` to reload and see changes
-    -   You can copy the contents of the `html` directory making sure to change any variables like DB urls, and others if needed
--   If all goes well, the same functionalities you made locally like creating an endpoint or writing code to retrieve some columns in the DB, should all work on the VM
