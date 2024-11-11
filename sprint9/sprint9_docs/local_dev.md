@@ -61,7 +61,7 @@ http {
     - It also contains a file called `get_all_courses.php` which just calls our open connection function inside `db_connection.php`
 6. Run `sudo nginx -t` and make sure there are no errors
 7. Run `brew services reload nginx`
-8. You _should_ be able to navigate to http://localhost:8080 and see our page
+8. You _should_ be able to navigate to and see our page
 9. You _should_ also be able to navigate to http://localhost:8080/courses/getAllCourses/ and see "Connected Successfully" meaning our mysql db connection worked!
 
 -   On the real VM, we would just have to change the mysql connection url. (probably more stuff I am forgetting)

@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-$apiUrl = "https://cis3760f23-01.socs.uoguelph.ca/courses/getCoursesByPrereq/";
+$apiUrl = "http://localhost:8082/courses/getCoursesByPrereq/";
 $postData = json_encode(["prerequisites" => [], "type" => 'AND']);
 
 $options = [
