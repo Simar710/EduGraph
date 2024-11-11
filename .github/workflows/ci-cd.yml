@@ -1,6 +1,5 @@
 name: CI/CD Pipeline
 
-# Trigger workflow on push to 'sprint9' branch
 on:
   push:
     branches:
@@ -8,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest  # Use a GitHub-hosted runner with Ubuntu
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout repository
@@ -16,10 +15,14 @@ jobs:
 
       - name: Get commit information
         run: |
+          if git rev-parse HEAD^ >/dev/null 2>&1; then
+            CHANGES=$(git diff --name-only HEAD^..HEAD ./sprint9/sprint9-files/html)
+          else
+            CHANGES=""
+          fi
           COMMIT_HASH=$(git rev-parse HEAD)
           COMMIT_MESSAGE=$(git log --format=%B -n 1 $COMMIT_HASH)
           CURRENT_BRANCH=${GITHUB_REF#refs/heads/}
-          CHANGES=$(git diff --name-only HEAD^..HEAD ./sprint9/sprint9-files/html)
           echo "COMMIT_HASH=$COMMIT_HASH" >> $GITHUB_ENV
           echo "COMMIT_MESSAGE=$COMMIT_MESSAGE" >> $GITHUB_ENV
           echo "CURRENT_BRANCH=$CURRENT_BRANCH" >> $GITHUB_ENV
@@ -48,8 +51,8 @@ jobs:
       - name: Install dependencies
         run: |
           sudo apt-get update
-          sudo apt-get install -y selenium-side-runner
           sudo apt-get install -y chromium-browser
+          npm install -g selenium-side-runner
 
       - name: Run UI Tests with Selenium
         run: |
