@@ -53,8 +53,17 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y chromium-browser
           npm install -g selenium-side-runner
+          npm install  # If you're using npm to manage dependencies
+
+      - name: Start local server
+        run: |
+          npm start -- --port 8082 &
+          sleep 10  # Wait for server to start
 
       - name: Run UI Tests with Selenium
         run: |
-          sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless,--disable-gpu, --disable-dev-shm-usage] browserName=chrome" ./sprint9/sprint9_docs/Testing-UI/Sprint7.side
-          sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless,--disable-gpu, --disable-dev-shm-usage] browserName=chrome" ./sprint9/sprint9_docs/Testing-UI/Tree_Generator.side
+          # Base URL set to localhost:8082 for the tests
+          selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless, --disable-gpu, --disable-dev-shm-usage] browserName=chrome" \
+          --base-url http://localhost:8082 ./sprint9/sprint9_docs/Testing-UI/Sprint7.side
+          selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless, --disable-gpu, --disable-dev-shm-usage] browserName=chrome" \
+          --base-url http://localhost:8082 ./sprint9/sprint9_docs/Testing-UI/Tree_Generator.side
