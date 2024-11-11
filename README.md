@@ -1,46 +1,123 @@
-# F23_CIS3760_101
+# Setting up MySQL, PHP, and NGINX on MacOS
 
-# Team
+## Note: YOU NEED HOMEBREW FOR ALL OF THIS
+## Note2: IF ON LINUX, STEPS ARE SIMILAR EXCEPT FOR THE PATHS AND PACKAGE MANAGER COMMANDS
 
--   Team Lead:
-    -   Emily Kozatchiner
--   Team Members:
-    -   Sara Adi
-    -   Fee Kim Ah-Poa
-    -   Simardeep Singh
-    -   Maneesh Wijewardhana
+## Note3: IF YOU ARE ON AN INTEL MAC, THE PATH `/opt/homebrew` WILL NOT EXIST, IT IS `/usr/local` INSTEAD
 
-## Current Sprint
+### Set up MySQL
 
-Sprint 9
+# Setting up MySQL and using our database in order to retrieve course information
 
-## Description
+## Note: I used the CSV file generated from sprint 2 (modified in sprint 3), to populate the table in our database
 
-**Project Overview**
+## Note: The database name is 'cis3760', the table name is 'coursesDB'.
 
-In Sprint 9 for F23 CIS\*3760, our team will be implement different wrap-up functionalities to clean up the website and ensure that it will be the best version of itself that it can. We will work on the following as a team:
--   Implement a CI/CD pipeline for testing and ensure that new additions from hence-forth are implemented with continous integration
--   Implementing graphing by a singular course rather than subject
+### Set up MySQL
 
-## Team Approach
+1. `brew install mysql`
+2. `brew services start mysql`
+3. `mysql -V` to check version
+4. `mysql -u root`
+5. Now should be in an interactive terminal and can run sql scripts
 
--   The whole team will ensure the clean-up of the site and wrap up functionality of course generator.
-<!-- -   Simar will create tasks, lead group meetings, and ensure everyone is okay with what tasks they are working on this sprint
-    -   Will develop user stories/test cases and Implement dark mode.
--   Sara, Fee, Maneesh and Emily will work in team programming format and work together on following tasks.
-    -   Identify Nodes and Build Tree structure using the chosen javascript library.
-    -   Build UI Design and Tree Design
-    -   Display tree to the frontend and improve UI design, if necessary
-    -   Write use stories and test cases. -->
+### Accessing the populated table within the database
 
-## Authors and acknowledgment
 
-    - Sara Adi
-    - Emily Kozatchiner
-    - Fee Kim Ah-Poa
-    - Maneesh K. Wijewardhana
-    - Simardeep Singh
+1. Start up mysql on local, using the above steps.
+3. Type `USE cis3760;`. This will switch into the cis3760 database (Create table and database, using the steps in the sections below)
+4. `SHOW TABLES;` will list all the tables within our database. Our complete tablle is called `coursesDB`. The other table `coursesToDELETE`, is the table we will use in our DELETE API calls for testing purposes. Both tables are fully populated from the CSV file.
+5. In order to view our tables, you can type `SELECT * FROM <tablename>`
 
-## Project status
 
-In-Progress
+### Create a databse with a table
+1. Type `CREATE DATABASE <database name>;`
+2. To switch to the newly created database: `USE <database name>;`
+3. To create the structure of the database and its columns:
+```
+CREATE TABLE <tablename> (
+    column1_name data_type,
+    column2_name data_type,
+    column3_name data_type,
+)
+```
+In our case it will be,
+```
+CREATE TABLE coursesDB (     
+    courseCode VARCHAR(20),     
+    courseName VARCHAR(255),     
+    prerequisites TEXT,     
+    restrictions TEXT );
+```
+4. To load data from the csv file:
+```
+LOAD DATA INFILE '/path/to/data.csv'
+INTO TABLE your_table_name
+FIELDS TERMINATED BY ','
+LINES TERMINATED BY '\n'
+IGNORE 1 ROWS;
+```
+
+### Set up PHP
+
+1. `brew install php`
+2. `brew services start php`
+3. `php -v` to check version
+
+### Set up NGINX
+
+1. `brew install nginx`
+2. `brew services start nginx`
+3. Copy this nginx config into `/opt/homebrew/etc/nginx/nginx.conf` or `/usr/local/etc/nginx/nginx.conf`
+
+-   NOTE: If you are on intel, anywhere you see /opt/homebrew, the path should be /usr/local in this config
+
+```nginx
+events {
+}
+
+http {
+    server {
+        listen 8082;
+        root /opt/homebrew/var/www/html;
+
+        index index.php;
+        location / {
+          include  /opt/homebrew/etc/nginx/mime.types;
+          try_files $uri $uri/ /index.php;
+        }
+        location /courses/getAllCourses/ {
+          try_files $uri $uri/ /get_all_courses.php;
+        }
+        location ~ \.php$ {
+          fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+          fastcgi_index server.php;
+          include fastcgi_params;
+          fastcgi_pass 127.0.0.1:9000;
+          fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        }
+    }
+}
+```
+
+4. Navigate to our cis3760 repo, make sure you are up to date on the sprint4 branch
+5. Copy the html folder from the sprint4 files into `/opt/homebrew/var/www/` or `/usr/local/var/www/` on intel by doing `cp -r html /opt/homebrew/var/www/`
+    - It contains a new file called `db_connection.php` that defines two functions, one that opens the db connection and one that closes it
+    - It also contains a file called `get_all_courses.php` which just calls our open connection function inside `db_connection.php`
+6. Run `sudo nginx -t` and make sure there are no errors
+7. Run `brew services reload nginx`
+8. You _should_ be able to navigate to and see our page
+9. You _should_ also be able to navigate to http://localhost:8080/courses/getAllCourses/ and see "Connected Successfully" meaning our mysql db connection worked!
+
+-   On the real VM, we would just have to change the mysql connection url. (probably more stuff I am forgetting)
+    -   To access MySQL on the VM, run `mysql -u cis3760 -p` and then enter `pass1234` when asked
+-   The `db_connection.php` and `get_all_courses` scripts are already on the server with the nginx config edited similar to the local one so https://cis3760f23-01.socs.uoguelph.ca/courses/getAllCourses/ will work
+-   **NOTE**: When you create php files, use snake_case and then the corresponding endpoint in nginx should be camelCase (keeps everything consistent)
+
+### Development Strategy
+
+-   Write and test everything locally first before pushing to sprint4 branch
+-   **IMPORTANT**: If you made nginx changes, remember that the nginx on the VM is configured differently than local so do not push your local nginx config to the repo, just push any changes you made in the html directory once it worked locally as they are the same on the VM (apart from some variables referencing localhost, but you will change that on the VM itself)
+    -   On the VM, you will have to do some live coding if the nginx config needed to be changed locally. Just edit it on the server making sure to add the changes properly. Usually these changes will be in `/etc/nginx/sites-available/3760Website` You can run `sudo nginx -t` to verify the config files after saving them then run `sudo systemctl restart nginx` to reload and see changes
+    -   You can copy the contents of the `html` directory making sure to change any variables like DB urls, and others if needed
+-   If all goes well, the same functionalities you made locally like creating an endpoint or writing code to retrieve some columns in the DB, should all work on the VM
