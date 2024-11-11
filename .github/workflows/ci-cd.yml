@@ -3,7 +3,7 @@ name: CI/CD Pipeline
 on:
   push:
     branches:
-      - sprint9  # You can specify any branch you want to deploy from
+      - sprint9  # Specify the branch to deploy from
 
 jobs:
   deploy:
@@ -23,11 +23,11 @@ jobs:
         COMMIT_HASH=$(git rev-parse HEAD)
         COMMIT_MESSAGE=$(git log --format=%B -n 1 $COMMIT_HASH)
         CURRENT_BRANCH=${{ github.ref_name }}
-        CHANGES=$(git diff --name-only HEAD^..HEAD)
+        CHANGES=$(git diff --name-only HEAD -- ~/builds/mC5sdKVSv/0/cis3760_f23/f23_cis3760_101/sprint9/sprint9-files/html || echo "no_changes")
 
         if [ "$CURRENT_BRANCH" != "sprint9" ]; then
           echo "No changes on sprint9 branch"
-        elif [ -z "$CHANGES" ]; then
+        elif [ "$CHANGES" == "no_changes" ]; then
           echo "No changes in the HTML folder. Commit message: $COMMIT_MESSAGE"
         else
           echo "Deploying changes..."
@@ -49,6 +49,6 @@ jobs:
 
     - name: Run tests
       run: |
-        cd ~/builds/mC5sdKVSv/0/cis3760_f23/f23_cis3760_101/sprint9/sprint9_docs/Testing-UI
+        cd /home/ubuntu/EduGraph/sprint9/sprint9_docs/Testing-UI
         sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless, --disable-gpu, --disable-dev-shm-usage]" browserName=chrome Sprint7.side
         sudo selenium-side-runner -c "goog:chromeOptions.args=[--no-sandbox, --headless, --disable-gpu, --disable-dev-shm-usage]" browserName=chrome Tree_Generator.side
