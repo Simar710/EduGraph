@@ -1,3 +1,4 @@
+# Intro and Set Up
 ### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
 ### Project: EduGraph
 
