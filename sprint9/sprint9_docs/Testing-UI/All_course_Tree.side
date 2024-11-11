@@ -2,7 +2,7 @@
   "id": "55310512-66e6-4997-bbc1-3f63a6ce2072",
   "version": "2.0",
   "name": "All_course_Tree",
-  "url": "http://localhost:8082",
+  "url": "http://34.201.123.35/",
   "tests": [{
     "id": "34405da5-0590-4784-901b-17c0871d63f0",
     "name": "Generate All Course Tree",
@@ -79,6 +79,6 @@
     "timeout": 300,
     "tests": ["34405da5-0590-4784-901b-17c0871d63f0"]
   }],
-  "urls": ["http://localhost:8082/"],
+  "urls": ["http://34.201.123.35/"],
   "plugins": []
 }
