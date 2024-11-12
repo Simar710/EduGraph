@@ -14,6 +14,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "0aef1f3b-aec3-444c-865d-001b7269e282",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "5348ffc9-d081-4b53-bb52-6787a56a7057",
       "comment": "",
       "command": "click",
@@ -123,6 +130,13 @@
       "target": "http://34.201.123.35/",
       "targets": [],
       "value": ""
+    }, {
+      "id": "c49f0d10-833f-4f8e-9f87-6b327b36e98d",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "bffaaf05-3ffc-4a84-a17e-6449bca81c9e",
       "comment": "",
@@ -234,6 +248,13 @@
       "target": "http://34.201.123.35/",
       "targets": [],
       "value": ""
+    }, {
+      "id": "15643458-b7b9-4d84-83eb-583c6551047b",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "0e936a58-e4de-44ee-802d-6bd420809de4",
       "comment": "",
@@ -380,6 +401,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "88777a28-8656-4526-800f-84e0b660a384",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "d2b897e0-9946-4851-bf85-77ab62146a22",
       "comment": "",
       "command": "click",
@@ -445,6 +473,13 @@
       "target": "http://34.201.123.35/",
       "targets": [],
       "value": ""
+    }, {
+      "id": "12e89110-07ee-429c-8df9-972fdf71274e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "dc865117-5400-4e18-bb32-c36c0c468619",
       "comment": "",

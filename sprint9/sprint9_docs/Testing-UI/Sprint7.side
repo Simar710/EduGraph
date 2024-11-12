@@ -87,6 +87,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "a5ce9313-46d1-454e-a876-2d0c94c68d6e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "2bce23d8-0f19-4f7b-85aa-7f1704337390",
       "comment": "",
       "command": "click",
@@ -129,6 +136,13 @@
       "target": "1440x900",
       "targets": [],
       "value": ""
+    }, {
+      "id": "a3354185-414c-429c-9c2f-5620988e1c0e",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "e702ffda-275b-4a6c-ae78-9e67ff1b2309",
       "comment": "",
@@ -282,12 +296,19 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "e89a5095-e543-4e53-8523-c39b3ef7331f",
+      "id": "789a1bf0-b261-4992-9e3c-a6dbe8c07f76",
       "comment": "",
       "command": "setWindowSize",
       "target": "1440x900",
       "targets": [],
       "value": ""
+    }, {
+      "id": "e89a5095-e543-4e53-8523-c39b3ef7331f",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "43ecedb3-e88a-4d3d-be05-10548b2754c8",
       "comment": "",
@@ -445,6 +466,13 @@
       ],
       "value": ""
     }, {
+      "id": "e9c3f475-521c-4ea1-9f76-3600976e7069",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "17f86a44-fa21-4b75-a4a6-a30664955d35",
       "comment": "",
       "command": "click",
@@ -505,6 +533,13 @@
       "target": "1440x900",
       "targets": [],
       "value": ""
+    }, {
+      "id": "890be0e4-b854-49a3-b389-e32e7c6f6584",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "88877b9a-6942-4747-a55c-7c5def20999e",
       "comment": "",
@@ -704,6 +739,13 @@
       "targets": [],
       "value": ""
     }, {
+      "id": "e8c069cc-75e9-4c8c-b4cf-1fb27588d574",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
+    }, {
       "id": "3afb1fcc-b9d6-4b98-b228-68d5d704a9fe",
       "comment": "",
       "command": "click",
@@ -842,6 +884,13 @@
       "target": "1440x900",
       "targets": [],
       "value": ""
+    }, {
+      "id": "1ebd4066-1344-460e-ad2c-8a4f0f061a83",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
+      "targets": [],
+      "value": "5000"
     }, {
       "id": "bffee2bd-3a7e-4519-bdd5-9b5e35fc0f56",
       "comment": "",
