@@ -90,7 +90,7 @@
       "id": "2bce23d8-0f19-4f7b-85aa-7f1704337390",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -133,7 +133,7 @@
       "id": "e702ffda-275b-4a6c-ae78-9e67ff1b2309",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -292,7 +292,7 @@
       "id": "43ecedb3-e88a-4d3d-be05-10548b2754c8",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -448,7 +448,7 @@
       "id": "17f86a44-fa21-4b75-a4a6-a30664955d35",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -509,7 +509,7 @@
       "id": "88877b9a-6942-4747-a55c-7c5def20999e",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -707,7 +707,7 @@
       "id": "3afb1fcc-b9d6-4b98-b228-68d5d704a9fe",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -846,7 +846,7 @@
       "id": "bffee2bd-3a7e-4519-bdd5-9b5e35fc0f56",
       "comment": "",
       "command": "click",
-      "target": "css=.lc-block:nth-child(3) > .btn",
+      "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
