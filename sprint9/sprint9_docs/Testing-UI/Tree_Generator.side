@@ -449,7 +449,7 @@
       "id": "dc865117-5400-4e18-bb32-c36c0c468619",
       "comment": "",
       "command": "click",
-      "target": "linkText=Start Now!",
+      "target": "css=.lc-block:nth-child(3) > .btn",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
@@ -464,7 +464,7 @@
       "id": "dda901b3-f3f3-45fc-91c0-7d11b1fe1f61",
       "comment": "",
       "command": "click",
-      "target": "linkText=Generate Course Tree",
+      "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
         ["css=#genTreeBtn > .btn", "css:finder"],
