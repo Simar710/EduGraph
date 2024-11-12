@@ -142,7 +142,7 @@
     }
 
     async function getSubjects() {
-      const response = await fetch("http://localhost:8082/courses/getSubjects/", {
+      const response = await fetch("http://34.201.123.35/courses/getSubjects/", {
         method: "GET",
         mode: "cors",
         headers: {
@@ -153,7 +153,7 @@
     }
 
     async function getAllCourses() {
-      const response = await fetch("http://localhost:8082/courses/getAllCourses/", {
+      const response = await fetch("http://34.201.123.35/courses/getAllCourses/", {
         method: "GET",
         mode: "cors",        headers: {
           "Content-Type": "application/json"
@@ -163,7 +163,7 @@
     }
 
     async function buildChartData(courseId) {
-      const courses = await fetch("http://localhost:8082/courses/getCoursesByPrereq/", {
+      const courses = await fetch("http://34.201.123.35/courses/getCoursesByPrereq/", {
         method: "POST",
         mode: "cors",
         body: JSON.stringify({
@@ -249,7 +249,7 @@
       dropdownMenu.addEventListener("click", async function(e) {
         genTreeCourses = []
         const subject = e.target.innerText;
-        const response = await fetch("http://localhost:8082/courses/getCoursesBySubject/", {
+        const response = await fetch("http://34.201.123.35/courses/getCoursesBySubject/", {
           method: "POST",
           mode: "cors",
           headers: {

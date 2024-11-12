@@ -1,4 +1,4 @@
-# Intro and Set Up
+# Intro and Set Up on local and on AWS.
 ### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
 ### Project: EduGraph
 
@@ -228,3 +228,203 @@ http {
 9. You _should_ also be able to navigate to http://localhost:8082/courses/getAllCourses/ and see "Connected Successfully" meaning the mysql db connection worked!
 
 -   **NOTE**: When you create php files, use snake_case and then the corresponding endpoint in nginx should be camelCase (keeps everything consistent)
+
+# Running the Project on Cloud server.
+## Deploying a PHP Website on AWS
+
+Deploying a PHP website on AWS involves several steps, from setting up the infrastructure to configuring the web and database servers. Here’s a step-by-step guide to deploying your PHP website on AWS:
+
+### 1. **Set Up an AWS EC2 Instance**
+
+AWS EC2 (Elastic Compute Cloud) is a scalable compute resource that will host your website.
+
+#### 1.1 **Create an EC2 Instance:**
+- **Login to AWS Console** and navigate to **EC2**.
+- **Launch an Instance** by selecting an Amazon Machine Image (AMI) like **Ubuntu Server**.
+- Choose an **instance type**.
+- Create or select a **Key Pair** (you will use this key to SSH into your instance).
+- Configure security groups to allow inbound traffic on HTTP (port 80) and HTTPS (port 443), as well as SSH (port 22) for access.
+- Launch the instance.
+
+#### 1.2 **Get the Public IP or DNS of the Instance:**
+After the EC2 instance is up, get the **public IP** or **public DNS** from the EC2 dashboard to access the instance.
+
+#### 1.3 **Connect to Your EC2 Instance:**
+Use SSH to connect to your instance:
+
+```bash
+ssh -i /path/to/your-key.pem ubuntu@your-instance-public-ip
+```
+
+### 2. Install Web Server (Nginx), PHP and MySQL
+Now, you need to install Nginx to serve your PHP website and PHP-FPM to process PHP scripts.
+
+1. Update the System:
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+2. Install Nginx:
+```bash
+sudo apt install nginx -y
+```
+3. Install PHP and PHP-FPM:
+```bash
+sudo apt install php-fpm php-mysql php-cli -y
+```
+4. Install MySQL (or other database):
+If you want to install MySQL on the same instance, you can do:
+```bash
+sudo apt install mysql-server -y
+sudo mysql_secure_installation
+```
+Alternatively, you can use Amazon RDS (relational database service) for a managed database service.
+
+5. Start Nginx and PHP-FPM Services:
+```bash
+sudo systemctl start nginx
+sudo systemctl enable nginx
+sudo systemctl start php7.4-fpm  # Adjust PHP version as necessary
+sudo systemctl enable php7.4-fpm
+```
+6. Configure Nginx for PHP, using the following steps.
+
+7. Create a Website Directory:
+```bash
+sudo mkdir -p /var/www/html/
+```
+8. Configure Nginx:
+Create a new configuration file in /etc/nginx/sites-available/3760website (Copy from 3760website in sites-available folder from git repo):
+```nginx
+# AWS EC2 nginx config for website
+server {
+	listen 80;  # Change to port 80 for standard HTTP access
+	server_name 34.201.123.35;  # Replace with your domain or public IP
+
+	root /var/www/html;  # Replace with the actual path where you cloned your repo
+	index index.php index.html index.htm;
+
+	# Define location for each endpoint (similar to your macOS config)
+
+	location /courses/getAllCourses/ {
+		try_files $uri $uri/ /get_all_courses.php;
+	}
+
+	location /course_generator {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /course_generator/genTree {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /simar {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /sara {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /emily {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /feekim {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /maneesh {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location / {
+		try_files $uri $uri/ /404/index.php;
+	}
+
+	location /courses/getAllCoursesCopy/ {
+		try_files $uri $uri/ /get_all_courses_copy.php;
+	}
+
+	location /courses/getSubjects/ {
+		try_files $uri $uri/ /get_subjects.php;
+	}
+
+	location /courses/getCoursesByPrereq/ {
+		try_files $uri $uri/ /get_courses_by_prereq.php?$args;
+	}
+
+	location /courses/getCoursesByRestrictions/ {
+		try_files $uri $uri/ /get_courses_by_restrict.php?$args;
+	}
+
+	location /courses/getCoursesBySubject/ {
+		try_files $uri $uri/ /get_courses_by_subject.php?$args;
+	}
+
+	location /courses/getCourseByCode/ {
+		try_files $uri $uri/ /get_course_by_code.php?$args;
+	}
+
+	location /courses/getCourseByName/ {
+		try_files $uri $uri/ /get_course_by_name.php?$args;
+	}
+
+	location ~ /courses/postCourses/ {
+		try_files $uri $uri/ /post_courses.php;
+		fastcgi_param REQUEST_METHOD $request_method;
+		include fastcgi_params;
+		fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;  # Adjust PHP version and socket path as needed
+	}
+
+	location ~ /courses/update/ {
+		try_files $uri $uri/ /put_dbInfo.php;
+		fastcgi_param REQUEST_METHOD $request_method;
+		include fastcgi_params;
+		fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;  # Adjust PHP version and socket path as needed
+	}
+
+	location ~ /courses/delete/ {
+		try_files $uri $uri/ /delete_course_by_code.php;
+		fastcgi_param REQUEST_METHOD $request_method;
+		include fastcgi_params;
+		fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;  # Adjust PHP version and socket path as needed
+	}
+
+	location /apidocs {
+		try_files $uri $uri/ /apidocs.php;
+	}
+
+	# PHP Processing Block
+	location ~ \.php$ {
+		fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+		fastcgi_index index.php;
+		include fastcgi_params;
+		fastcgi_pass unix:/var/run/php/php8.3-fpm.sock;  # Adjust PHP version and socket path as needed
+		fastcgi_split_path_info ^(.+\.php)(/.+)$;
+	}
+}
+```
+9. Enable the Nginx Configuration and Restart:
+```bash
+sudo ln -s /etc/nginx/sites-available/your_website_name /etc/nginx/sites-enabled/
+sudo nginx -t  # Test the Nginx configuration
+sudo systemctl restart nginx
+```
+10. Deploy Your Website Files (open the public ip address, which is mentioned in the EC2 instance)
+11. Upload Your PHP Website Files:
+You can use SFTP, SCP, or FTP to upload your website files to /var/www/html.
+Alternatively, clone your website repository from GitHub and copy the html to /var/www/html/ directory:
+```bash
+git clone https://github.com/Simar710/EduGraph.git
+sudo cp -r EduGraph/sprint9/sprint9-files/html /var/www
+```
+
+
+4.2 Set Correct Permissions:
+Make sure the Nginx user has access to the files:
+```bash
+sudo chown -R www-data:www-data /var/www/html/your_website_directory
+sudo chmod -R 755 /var/www/html/your_website_directory
+```
+
+12. After installing MySQL, follow the same steps as mentioned above to create the database and table. Make sure the php files, have the correct url where your website is deployed.

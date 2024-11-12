@@ -1,6 +1,6 @@
 # API Documentation
 
--   The base URL for requests is http://localhost:8082/
+-   The base URL for requests is http://34.201.123.35/
 -   Our API is defined as /courses/{functionality}/
     -   **The last forward slash is important**
 
@@ -8,7 +8,7 @@
 
 Get a list of all courses in the coursesDB database
 
-> http://localhost:8082/courses/getAllCourses/ 
+> http://34.201.123.35/courses/getAllCourses/ 
 
 ```
 [
@@ -38,7 +38,7 @@ Get a list of all courses in the coursesDB database
 
 Get a list of all courses in the coursesDBCopy database (used to verify POST, PUT, and DELETE operations)
 
-> http://localhost:8082/courses/getAllCoursesCopy/ 
+> http://34.201.123.35/courses/getAllCoursesCopy/ 
 
 ```
 [
@@ -68,7 +68,7 @@ Get a list of all courses in the coursesDBCopy database (used to verify POST, PU
 
 Get all the courses by a specified subject
 
-> http://localhost:8082/courses/getSubjects/ 
+> http://34.201.123.35/courses/getSubjects/ 
 
 ```
 [
@@ -93,7 +93,7 @@ Get all the courses by a specified subject
 
 Get all the courses by a specified subject(s)
 
-> http://localhost:8082/courses/getCoursesBySubject/ 
+> http://34.201.123.35/courses/getCoursesBySubject/ 
 
 Input a JSON body like this containing 1 or more subjects in an array
 
@@ -143,7 +143,7 @@ Result:
 
 Get course details using the respective course code
 
-> http://localhost:8082/courses/getCourseByCode/ 
+> http://34.201.123.35/courses/getCourseByCode/ 
 
 Input a JSON body like this containing 1 or more course codes in an array
 
@@ -180,7 +180,7 @@ Result:
 
 Get course details using the respective course name using fuzzy search
 
-> http://localhost:8082/courses/getCourseByName/ 
+> http://34.201.123.35/courses/getCourseByName/ 
 
 Input a JSON body like this containing 1 or more course names in an array
 
@@ -223,7 +223,7 @@ Result:
 
 Get courses by their prerequisites using the course code(s)
 
-> http://localhost:8082/courses/getCoursesByPrereq/ 
+> http://34.201.123.35/courses/getCoursesByPrereq/ 
 
 Input a JSON body like this containing 0 or more prerequisites in an array and a **MANDATORY** type property
 
@@ -352,7 +352,7 @@ Result:
 
 Get courses by their restrictions using the course code(s)
 
-> http://localhost:8082/courses/getCoursesByRestrictions/ 
+> http://34.201.123.35/courses/getCoursesByRestrictions/ 
 
 Input a JSON body like this containing 0 or more restrictions in an array and a **MANDATORY** type property
 
@@ -468,7 +468,7 @@ Result:
 
 Update the coursesDBCopy table with a new course
 
-> http://localhost:8082/courses/postCourses/ 
+> http://34.201.123.35/courses/postCourses/ 
 
 You must provide a JSON body like this:
 
@@ -526,7 +526,7 @@ If you want restrictions to be empty, there are two ways to achieve it:
 
 Update a specific course's information in the coursesDBCopy table using a mandatory courseCode property
 
-> http://localhost:8082/courses/update/ 
+> http://34.201.123.35/courses/update/ 
 
 You must provide a JSON body like this:
 
@@ -577,7 +577,7 @@ If the update is not for courseName, prerequisites, and restrictions, it will th
 
 Delete a course from the coursesDBCopy table by the courseCode
 
-> http://localhost:8082/courses/delete/ 
+> http://34.201.123.35/courses/delete/ 
 
 You must provide a JSON body like this:
 

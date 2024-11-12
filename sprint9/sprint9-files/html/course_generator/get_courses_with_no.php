@@ -2,7 +2,7 @@
 
 header('Content-Type: application/json');
 
-$apiUrl = "http://localhost:8082/courses/getCoursesByPrereq/";
+$apiUrl = "http://34.201.123.35/courses/getCoursesByPrereq/";
 $postData = json_encode(["prerequisites" => [], "type" => 'AND']);
 
 $options = [

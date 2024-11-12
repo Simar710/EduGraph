@@ -1,6 +1,6 @@
 # API Documentation
 
--   The base URL for requests is https://cis3760f23-01.socs.uoguelph.ca/
+-   The base URL for requests is https://34.201.123.35/
 -   Our API is defined as /courses/\<functionality>/
     -   **The last forward slash is important**
 
@@ -8,7 +8,7 @@
 
 Get a list of all courses in the coursesDB database
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getAllCourses/
+> https://34.201.123.35/courses/getAllCourses/
 
 ```
 [
@@ -37,7 +37,7 @@ Get a list of all courses in the coursesDB database
 
 Get a list of all courses in the coursesDBCopy database (used to verify POST, PUT, and DELETE operations)
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getAllCoursesCopy/
+> https://34.201.123.35/courses/getAllCoursesCopy/
 
 ```
 [
@@ -66,7 +66,7 @@ Get a list of all courses in the coursesDBCopy database (used to verify POST, PU
 
 Get all the courses by a specified subject
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getSubjects/
+> https://34.201.123.35/courses/getSubjects/
 
 ```
 [
@@ -90,7 +90,7 @@ Get all the courses by a specified subject
 
 Get all the courses by a specified subject(s)
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getCoursesBySubject/
+> https://34.201.123.35/courses/getCoursesBySubject/
 
 Input a JSON body like this containing 1 or more subjects in an array
 
@@ -139,7 +139,7 @@ Result:
 
 Get course details using the respective course code
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getCourseByCode/
+> https://34.201.123.35/courses/getCourseByCode/
 
 Input a JSON body like this containing 1 or more course codes in an array
 
@@ -175,7 +175,7 @@ Result:
 
 Get course details using the respective course name using fuzzy search
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getCourseByName/
+> https://34.201.123.35/courses/getCourseByName/
 
 Input a JSON body like this containing 1 or more course names in an array
 
@@ -217,7 +217,7 @@ Result:
 
 Get courses by their prerequisites using the course code(s)
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getCoursesByPrereq/
+> https://34.201.123.35/courses/getCoursesByPrereq/
 
 Input a JSON body like this containing 0 or more prerequisites in an array and a **MANDATORY** type property
 
@@ -345,7 +345,7 @@ Result:
 
 Get courses by their restrictions using the course code(s)
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/getCoursesByRestrictions/
+> https://34.201.123.35/courses/getCoursesByRestrictions/
 
 Input a JSON body like this containing 0 or more restrictions in an array and a **MANDATORY** type property
 
@@ -460,7 +460,7 @@ Result:
 
 Update the coursesDBCopy table with a new course
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/postCourses/
+> https://34.201.123.35/courses/postCourses/
 
 You must provide a JSON body like this:
 
@@ -517,7 +517,7 @@ If you want restrictions to be empty, there are two ways to achieve it:
 
 Update a specific course's information in the coursesDBCopy table using a mandatory courseCode property
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/update/
+> https://34.201.123.35/courses/update/
 
 You must provide a JSON body like this:
 
@@ -567,7 +567,7 @@ If the update is not for courseName, prerequisites, and restrictions, it will th
 
 Delete a course from the coursesDBCopy table by the courseCode
 
-> https://cis3760f23-01.socs.uoguelph.ca/courses/delete/
+> https://34.201.123.35/courses/delete/
 
 You must provide a JSON body like this:
 

@@ -19,7 +19,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         if (empty($enteredCourses)) {
             // Send a POST request to the API endpoint to get available courses with no prerequisites
-            $apiUrl = "http://localhost:8082/courses/getCoursesByPrereq/";
+            $apiUrl = "http://34.201.123.35/courses/getCoursesByPrereq/";
 
             $postData = json_encode(["prerequisites" => $enteredCourses,"type" => 'AND']);
  
@@ -38,7 +38,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         else {
         // Send a POST request to the API endpoint to get available courses 
       
-        $apiUrl = "http://localhost:8082/courses/getCoursesByPrereq/";
+        $apiUrl = "http://34.201.123.35/courses/getCoursesByPrereq/";
   
         $postData = json_encode(["prerequisites" => $enteredCourses,"type" => 'OR']);
  

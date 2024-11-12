@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    $apiUrl = "http://localhost:8082/courses/getCourseByCode/";
+    $apiUrl = "http://34.201.123.35/courses/getCourseByCode/";
     $postData = json_encode(["courseCode" => $courseCode]);
 
     $options = [
