@@ -1,0 +1,1 @@
+## This directory only contains vba and python script photos as I just want to include them in the VBA Readme. This is not the whole functionality.

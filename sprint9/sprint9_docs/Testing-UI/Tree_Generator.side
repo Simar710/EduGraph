@@ -23,7 +23,7 @@
     }, {
       "id": "5348ffc9-d081-4b53-bb52-6787a56a7057",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -140,7 +140,7 @@
     }, {
       "id": "bffaaf05-3ffc-4a84-a17e-6449bca81c9e",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -258,7 +258,7 @@
     }, {
       "id": "0e936a58-e4de-44ee-802d-6bd420809de4",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -410,7 +410,7 @@
     }, {
       "id": "d2b897e0-9946-4851-bf85-77ab62146a22",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -483,7 +483,7 @@
     }, {
       "id": "dc865117-5400-4e18-bb32-c36c0c468619",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],

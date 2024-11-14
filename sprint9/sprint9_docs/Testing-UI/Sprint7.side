@@ -80,23 +80,23 @@
       "targets": [],
       "value": ""
     }, {
-      "id": "667dfc6a-9808-41fc-9280-2062d4a35c8e",
+      "id": "97034a8e-c799-44ef-b999-96bafa0b0b2c",
       "comment": "",
       "command": "setWindowSize",
       "target": "1440x900",
       "targets": [],
       "value": ""
     }, {
-      "id": "a5ce9313-46d1-454e-a876-2d0c94c68d6e",
+      "id": "0feb1983-0435-4a34-b6df-00d679d91160",
       "comment": "",
       "command": "waitForElementVisible",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [],
       "value": "5000"
     }, {
-      "id": "2bce23d8-0f19-4f7b-85aa-7f1704337390",
+      "id": "171730ad-4b9e-448f-b68f-2ce5fdf1c151",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -111,7 +111,7 @@
     }, {
       "id": "681beea9-8d3f-4a7c-8fb6-604e591a81e0",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.btn-home",
       "targets": [
         ["css=.btn-home", "css:finder"],
@@ -120,46 +120,39 @@
       "value": ""
     }]
   }, {
-    "id": "09d51d0b-706e-4d0f-a788-2dca38475ac1",
+    "id": "3e8db033-27a0-4b49-b6a3-64b2fa0dba81",
     "name": "Enter courses - correct format",
     "commands": [{
-      "id": "91ebe24b-c220-4afa-9b3c-0a894df64584",
+      "id": "e0cfe368-43d2-4c76-bdc6-ceaeceb41706",
       "comment": "",
       "command": "open",
-      "target": "/",
+      "target": "http://34.201.123.35/",
       "targets": [],
       "value": ""
     }, {
-      "id": "30b40329-1824-46a8-b0d0-ff848006be1f",
+      "id": "72df388a-7efa-46b5-b83b-1c5382290961",
       "comment": "",
       "command": "setWindowSize",
-      "target": "1440x900",
+      "target": "1680x962",
       "targets": [],
       "value": ""
     }, {
-      "id": "a3354185-414c-429c-9c2f-5620988e1c0e",
+      "id": "1385c615-3c5c-4b5b-8173-60d57b5dc78a",
       "comment": "",
-      "command": "waitForElementVisible",
-      "target": "xpath=//a[contains(text(),'Start Now!')]",
-      "targets": [],
-      "value": "5000"
-    }, {
-      "id": "e702ffda-275b-4a6c-ae78-9e67ff1b2309",
-      "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
         ["css=.lc-block:nth-child(3) > .btn", "css:finder"],
         ["xpath=//a[contains(text(),'Start Now!')]", "xpath:link"],
         ["xpath=//section[@id='generator']/div/div/div[2]/div[3]/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'course_generator/index.php')]", "xpath:href"],
+        ["xpath=//a[contains(@href, 'course_generator')]", "xpath:href"],
         ["xpath=//div[3]/a", "xpath:position"],
         ["xpath=//a[contains(.,'Start Now!')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "633d7660-3eb7-40f3-9d8f-5523401423c8",
+      "id": "2f49d53b-3f9a-49d4-bbf9-02f275e19a56",
       "comment": "",
       "command": "click",
       "target": "id=course",
@@ -169,11 +162,11 @@
         ["css=#course", "css:finder"],
         ["xpath=//input[@id='course']", "xpath:attributes"],
         ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["xpath=//div/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "4082df4e-eb44-4cbc-9d73-ed7283a9f98f",
+      "id": "5c90b9da-1431-43c1-b29d-b7c1d9a8dc7b",
       "comment": "",
       "command": "type",
       "target": "id=course",
@@ -183,25 +176,23 @@
         ["css=#course", "css:finder"],
         ["xpath=//input[@id='course']", "xpath:attributes"],
         ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["xpath=//div/input", "xpath:position"]
       ],
       "value": "CIS*2500"
     }, {
-      "id": "f149f625-08eb-4718-9d3f-746d19385dd2",
+      "id": "0931e8cf-d69d-4a65-b900-50bc96fd2eee",
       "comment": "",
       "command": "click",
       "target": "css=.btn1",
       "targets": [
-        ["linkText=Add Course to List", "linkText"],
         ["css=.btn1", "css:finder"],
-        ["xpath=//a[contains(text(),'Add Course to List')]", "xpath:link"],
-        ["xpath=//section[@id='addCourse']/div/div[2]/a", "xpath:idRelative"],
-        ["xpath=//div[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Add Course to List')]", "xpath:innerText"]
+        ["xpath=//section[@id='addCourse']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Course to List')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
-      "id": "c1f3870d-0802-4c2f-a69a-93c1e4be1c53",
+      "id": "ac84043c-2b19-4613-ba80-d08445dbd17b",
       "comment": "",
       "command": "click",
       "target": "id=course",
@@ -211,11 +202,11 @@
         ["css=#course", "css:finder"],
         ["xpath=//input[@id='course']", "xpath:attributes"],
         ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["xpath=//div/input", "xpath:position"]
       ],
       "value": ""
     }, {
-      "id": "ef4232dc-af2e-4ad9-ae15-c4f9d46877be",
+      "id": "a17e7693-28a3-48ac-adc4-69a0c7275a94",
       "comment": "",
       "command": "type",
       "target": "id=course",
@@ -225,63 +216,19 @@
         ["css=#course", "css:finder"],
         ["xpath=//input[@id='course']", "xpath:attributes"],
         ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
+        ["xpath=//div/input", "xpath:position"]
       ],
       "value": "CIS*1910"
     }, {
-      "id": "0c443571-d259-4ac7-9f93-b9ac4695f7f8",
+      "id": "8d860ca3-82fe-4ec0-a3eb-b3f56e8d4ed1",
       "comment": "",
       "command": "click",
       "target": "css=.btn1",
       "targets": [
-        ["linkText=Add Course to List", "linkText"],
         ["css=.btn1", "css:finder"],
-        ["xpath=//a[contains(text(),'Add Course to List')]", "xpath:link"],
-        ["xpath=//section[@id='addCourse']/div/div[2]/a", "xpath:idRelative"],
-        ["xpath=//div[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Add Course to List')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "104a80c0-92f7-4146-a72c-65c12ff40633",
-      "comment": "",
-      "command": "click",
-      "target": "id=course",
-      "targets": [
-        ["id=course", "id"],
-        ["name=course", "name"],
-        ["css=#course", "css:finder"],
-        ["xpath=//input[@id='course']", "xpath:attributes"],
-        ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "156af6b0-0dc6-4b27-a248-da54f6bac2e7",
-      "comment": "",
-      "command": "type",
-      "target": "id=course",
-      "targets": [
-        ["id=course", "id"],
-        ["name=course", "name"],
-        ["css=#course", "css:finder"],
-        ["xpath=//input[@id='course']", "xpath:attributes"],
-        ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "CIS*1300"
-    }, {
-      "id": "fc9a4fc9-bca6-4b78-9896-fb7837aa507a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn1",
-      "targets": [
-        ["linkText=Add Course to List", "linkText"],
-        ["css=.btn1", "css:finder"],
-        ["xpath=//a[contains(text(),'Add Course to List')]", "xpath:link"],
-        ["xpath=//section[@id='addCourse']/div/div[2]/a", "xpath:idRelative"],
-        ["xpath=//div[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Add Course to List')]", "xpath:innerText"]
+        ["xpath=//section[@id='addCourse']/div/div[2]/button", "xpath:idRelative"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Add Course to List')]", "xpath:innerText"]
       ],
       "value": ""
     }]
@@ -312,7 +259,7 @@
     }, {
       "id": "43ecedb3-e88a-4d3d-be05-10548b2754c8",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -327,7 +274,7 @@
     }, {
       "id": "efddb4e0-517c-42ec-bd26-7dbaa300003e",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.clear-btn",
       "targets": [
         ["linkText=Clear Courses from List", "linkText"],
@@ -341,7 +288,7 @@
     }, {
       "id": "cda24470-7b94-456c-a097-ee4da67736fd",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course",
       "targets": [
         ["id=course", "id"],
@@ -383,7 +330,7 @@
     }, {
       "id": "4b25a400-0bcc-41f1-b0c9-a480c4d3b6a2",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course",
       "targets": [
         ["id=course", "id"],
@@ -413,19 +360,12 @@
       "comment": "",
       "command": "click",
       "target": "css=.btn1",
-      "targets": [
-        ["linkText=Add Course to List", "linkText"],
-        ["css=.btn1", "css:finder"],
-        ["xpath=//a[contains(text(),'Add Course to List')]", "xpath:link"],
-        ["xpath=//section[@id='addCourse']/div/div[2]/a", "xpath:idRelative"],
-        ["xpath=//div[2]/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Add Course to List')]", "xpath:innerText"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "ca90b57e-dd47-4678-b3da-a75cd631dd0b",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.clear-btn",
       "targets": [
         ["linkText=Clear Courses from List", "linkText"],
@@ -475,7 +415,7 @@
     }, {
       "id": "17f86a44-fa21-4b75-a4a6-a30664955d35",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -490,7 +430,7 @@
     }, {
       "id": "a09d06b1-5b67-40dd-98e2-3ff847c18cff",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.gen-course-empty-btn2",
       "targets": [
         ["linkText=Generate Courses With No Prerequisites", "linkText"],
@@ -504,7 +444,7 @@
     }, {
       "id": "8d047f83-be2c-45a1-bb04-bc37604b10f6",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.clear-btn-rec",
       "targets": [
         ["linkText=Clear Results", "linkText"],
@@ -543,7 +483,7 @@
     }, {
       "id": "88877b9a-6942-4747-a55c-7c5def20999e",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -558,7 +498,7 @@
     }, {
       "id": "b20b7b40-e9db-4d15-87a5-a8a494ec73ab",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course",
       "targets": [
         ["id=course", "id"],
@@ -584,7 +524,14 @@
       ],
       "value": "cis*2500"
     }, {
-      "id": "a6ec07d6-07fe-471d-bdc2-c256be85db0b",
+      "id": "bb73a147-67f5-4ae4-8716-360e89ce1dae",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.btn1",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "7f408d96-80be-42fb-9053-0e579812475e",
       "comment": "",
       "command": "click",
       "target": "css=.btn1",
@@ -598,29 +545,11 @@
       ],
       "value": ""
     }, {
-      "id": "cc3511db-468e-47f4-b1ed-0b155e0a350a",
-      "comment": "",
-      "command": "click",
-      "target": "css=.input-course-container",
-      "targets": [
-        ["css=.input-course-container", "css:finder"],
-        ["xpath=//section[@id='addCourse']/div", "xpath:idRelative"],
-        ["xpath=//section/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
       "id": "23d52caa-5b7f-4897-bab8-2c53274bd4eb",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course",
-      "targets": [
-        ["id=course", "id"],
-        ["name=course", "name"],
-        ["css=#course", "css:finder"],
-        ["xpath=//input[@id='course']", "xpath:attributes"],
-        ["xpath=//section[@id='addCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//input", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "5c7c8788-1f9a-41b6-9ca3-f8a472c618b6",
@@ -637,7 +566,14 @@
       ],
       "value": "cis*1910"
     }, {
-      "id": "73d7e9d5-eb1e-41eb-9959-48d7ece692af",
+      "id": "5a77e5ad-6e70-4dcf-960b-eeb68c7a7cc2",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "css=.btn1",
+      "targets": [],
+      "value": "5000"
+    }, {
+      "id": "8c279eb8-194d-4bf8-b8f8-e6e74637814f",
       "comment": "",
       "command": "click",
       "target": "css=.btn1",
@@ -651,32 +587,23 @@
       ],
       "value": ""
     }, {
-      "id": "e789d604-49c2-4299-9296-66725ea32b3d",
+      "id": "73d7e9d5-eb1e-41eb-9959-48d7ece692af",
       "comment": "",
-      "command": "click",
-      "target": "css=.generate-course-container",
-      "targets": [
-        ["css=.generate-course-container", "css:finder"],
-        ["xpath=//section[@id='courseGenerator']/div", "xpath:idRelative"],
-        ["xpath=//section[2]/div", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "4feb54d5-1271-40c6-8146-28c567e9fcca",
-      "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.btn2",
       "targets": [
-        ["css=.btn2", "css:finder"],
-        ["xpath=(//a[contains(text(),'Generate Courses')])[2]", "xpath:link"],
-        ["xpath=//section[@id='courseGenerator']/div/div/a", "xpath:idRelative"],
-        ["xpath=//section[2]/div/div/a", "xpath:position"]
+        ["linkText=Add Course to List", "linkText"],
+        ["css=.btn1", "css:finder"],
+        ["xpath=//a[contains(text(),'Add Course to List')]", "xpath:link"],
+        ["xpath=//section[@id='addCourse']/div/div[2]/a", "xpath:idRelative"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Add Course to List')]", "xpath:innerText"]
       ],
       "value": ""
     }, {
       "id": "67ec672f-a387-4898-ba6b-05c0e2fdeddc",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.clear-btn",
       "targets": [
         ["linkText=Clear Courses from List", "linkText"],
@@ -688,16 +615,18 @@
       ],
       "value": ""
     }, {
+      "id": "e0107c52-ae2a-41c6-9209-25dde9d95c75",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "css=.clear-btn-rec",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "d6d04f51-b6bc-4a6a-9d5e-7954311e69a3",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.btn2",
-      "targets": [
-        ["css=.btn2", "css:finder"],
-        ["xpath=(//a[contains(text(),'Generate Courses')])[2]", "xpath:link"],
-        ["xpath=//section[@id='courseGenerator']/div/div/a", "xpath:idRelative"],
-        ["xpath=//section[2]/div/div/a", "xpath:position"]
-      ],
+      "targets": [],
       "value": ""
     }, {
       "id": "7b70d754-a313-423e-bcdd-bb036b80c27a",
@@ -705,20 +634,6 @@
       "command": "assertAlert",
       "target": "You have not inputted any courses yet, did you mean to click Generate Courses With No Prerequisites?",
       "targets": [],
-      "value": ""
-    }, {
-      "id": "668e52cc-9560-4720-938b-1a42f8406a25",
-      "comment": "",
-      "command": "click",
-      "target": "css=.clear-btn-rec",
-      "targets": [
-        ["linkText=Clear Results", "linkText"],
-        ["css=.clear-btn-rec", "css:finder"],
-        ["xpath=//a[contains(text(),'Clear Results')]", "xpath:link"],
-        ["xpath=//section[@id='courseGenerator']/div/div/a[3]", "xpath:idRelative"],
-        ["xpath=//a[3]", "xpath:position"],
-        ["xpath=//a[contains(.,'Clear Results')]", "xpath:innerText"]
-      ],
       "value": ""
     }]
   }, {
@@ -748,7 +663,7 @@
     }, {
       "id": "3afb1fcc-b9d6-4b98-b228-68d5d704a9fe",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -763,7 +678,7 @@
     }, {
       "id": "9ebc7e2a-ddb3-4477-a0b4-66b42e6b96c7",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course-detail",
       "targets": [
         ["id=course-detail", "id"],
@@ -791,7 +706,7 @@
     }, {
       "id": "8ffe6972-0d71-4b9a-bcc5-2298c9d1a2ed",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.btn3",
       "targets": [
         ["css=.btn3", "css:finder"],
@@ -804,7 +719,7 @@
     }, {
       "id": "b9c62cf0-e8bf-4f64-b0ce-c5bbc0812238",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.clear-btn-detail",
       "targets": [
         ["css=.clear-btn-detail", "css:finder"],
@@ -816,7 +731,7 @@
     }, {
       "id": "c279f7f4-225a-4367-a91e-ae9c0bfd1e96",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course-detail",
       "targets": [
         ["id=course-detail", "id"],
@@ -844,7 +759,7 @@
     }, {
       "id": "1e9b1f7b-b452-4ab5-823a-c21d869106a7",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.btn3",
       "targets": [
         ["css=.btn3", "css:finder"],
@@ -857,7 +772,7 @@
     }, {
       "id": "271a3b7d-9aa0-4521-8e99-14d723478eae",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=.clear-btn-detail",
       "targets": [
         ["css=.clear-btn-detail", "css:finder"],
@@ -894,7 +809,7 @@
     }, {
       "id": "bffee2bd-3a7e-4519-bdd5-9b5e35fc0f56",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -909,7 +824,7 @@
     }, {
       "id": "83213730-a940-4127-b7c5-c3e5a810aa47",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=course-detail",
       "targets": [
         ["id=course-detail", "id"],
@@ -954,54 +869,6 @@
       "target": "Please enter the course in the format of SUBJECT*COURSE NUM, for example; CIS*2500",
       "targets": [],
       "value": ""
-    }, {
-      "id": "6efdc8b5-9a9c-4073-84fb-9ebc1d6b92ae",
-      "comment": "",
-      "command": "click",
-      "target": "id=course-detail",
-      "targets": [
-        ["id=course-detail", "id"],
-        ["name=course-detail", "name"],
-        ["css=#course-detail", "css:finder"],
-        ["xpath=//input[@id='course-detail']", "xpath:attributes"],
-        ["xpath=//section[@id='searchCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//section[3]/div/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e8d8f916-82ca-4e11-9e2d-f1abe09d985f",
-      "comment": "",
-      "command": "type",
-      "target": "id=course-detail",
-      "targets": [
-        ["id=course-detail", "id"],
-        ["name=course-detail", "name"],
-        ["css=#course-detail", "css:finder"],
-        ["xpath=//input[@id='course-detail']", "xpath:attributes"],
-        ["xpath=//section[@id='searchCourse']/div/div/input", "xpath:idRelative"],
-        ["xpath=//section[3]/div/div/input", "xpath:position"]
-      ],
-      "value": "*1910"
-    }, {
-      "id": "bcff5b4d-8870-478d-a283-a0bf3c9846ff",
-      "comment": "",
-      "command": "click",
-      "target": "css=.btn3",
-      "targets": [
-        ["css=.btn3", "css:finder"],
-        ["xpath=//button[@type='button']", "xpath:attributes"],
-        ["xpath=//section[@id='searchCourse']/div/div/button", "xpath:idRelative"],
-        ["xpath=//div/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Search')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "c5ea2b31-cab2-4923-9374-e90315b09463",
-      "comment": "",
-      "command": "assertAlert",
-      "target": "Please enter the course in the format of SUBJECT*COURSE NUM, for example; CIS*2500",
-      "targets": [],
-      "value": ""
     }]
   }],
   "suites": [{
@@ -1017,7 +884,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["09d51d0b-706e-4d0f-a788-2dca38475ac1", "fa0f5e59-b4e5-4267-8aeb-098ab3d97e03"]
+    "tests": ["3e8db033-27a0-4b49-b6a3-64b2fa0dba81", "fa0f5e59-b4e5-4267-8aeb-098ab3d97e03"]
   }, {
     "id": "02e57a8c-b7fe-4ea4-88d7-12543cfc1ea4",
     "name": "CourseGenerator - Part 2",
