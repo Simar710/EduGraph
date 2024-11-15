@@ -1,5 +1,6 @@
 # Intro and Set Up on local and on AWS.
 ### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch should have the final set up and all the necessary info.
+
 ### Project: EduGraph
 
    ### Summary:
