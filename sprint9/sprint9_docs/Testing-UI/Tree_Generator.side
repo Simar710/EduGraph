@@ -38,7 +38,7 @@
     }, {
       "id": "ab41cbd4-ef70-411f-bb17-19e19b962cce",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
@@ -197,7 +197,7 @@
     }, {
       "id": "455ba400-d25f-4829-ae98-e44c60067993",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["css=#genTreeBtn > .btn", "css:finder"],
@@ -273,7 +273,7 @@
     }, {
       "id": "bee94046-cfc9-48ed-9ccf-c83533e909d7",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
@@ -425,7 +425,7 @@
     }, {
       "id": "03dc8f71-3a23-46b0-b08f-efe95e6e4842",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
@@ -498,7 +498,7 @@
     }, {
       "id": "dda901b3-f3f3-45fc-91c0-7d11b1fe1f61",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
