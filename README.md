@@ -3,7 +3,6 @@
 - **Link to Demo Videos**: [DEMO VIDEOS](https://github.com/Simar710/EduGraph/blob/main/Demo_Videos/demo_videos.md)
   
 # Intro and Set Up on local and on AWS.
-### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch should have the final set up and all the necessary info.
 
 ### Project: EduGraph
 
@@ -450,3 +449,5 @@ sudo chmod -R 755 /var/www/html/your_website_directory
 ```
 
 12. After installing MySQL, follow the same steps as mentioned above to create the database and table. Make sure the php files, have the correct url where your website is deployed.
+
+### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch should have the final set up and all the necessary info.
