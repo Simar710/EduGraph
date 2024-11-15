@@ -1,6 +1,6 @@
 - Link to website: [EduGraph](http://34.201.123.35/) 
   - *NOTE*: The above link may not work in the future. I may terminate the deployment on AWS depending on the resource consumption as I have acount with basic plan only on AWS.
-- Link to Demo Videos: **[DEMO VIDEOS]**(https://github.com/Simar710/EduGraph/blob/main/Demo_Videos/demo_videos.md)
+- **Link to Demo Videos**: [DEMO VIDEOS](https://github.com/Simar710/EduGraph/blob/main/Demo_Videos/demo_videos.md)
   
 # Intro and Set Up on local and on AWS.
 ### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch should have the final set up and all the necessary info.
