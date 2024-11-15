@@ -334,7 +334,7 @@
     }, {
       "id": "9dde3e24-e1c9-47f7-86e4-001c1ec5eebe",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=searchInput",
       "targets": [
         ["id=searchInput", "id"],

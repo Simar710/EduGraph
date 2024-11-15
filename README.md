@@ -6,7 +6,9 @@
    -   Created a full stack web application.
    -   Parsed the data into csv using python, developed a Python-based CLI and Excel UI using VBA scripts.
    -   Designed and Stored the data in a MySQL database.
-   -   Architect the PHP REST APIs, establishing secure HTTP protocols for data exchanges between the client and server, featuring PHP full stack web applications for course recommendations, prerequisite graphs, hosted using Nginx in AWS EC2 Instance as well as on local enviroment
+   -   Architect the PHP REST APIs, establishing secure HTTP protocols for data exchanges between the client and server, featuring PHP full stack web applications for course recommendations,
+   -   Vis.js is used to generate graphs and trees.
+   -   Application is hosted using Nginx in AWS EC2 Instance as well as on local enviroment
    -   CI/CD pipeline is also set up using GitHub Action for GitHub and Gitlab CI/CD for Gitlab, with proper testing.
    -   Created and executed detailed test plans using TDD principles and Selenium for front-end automation.
    -   Implemented accessibility features (keyboard navigation, high-contrast theme) and ensured WCAG 2.1 compliance.
@@ -22,14 +24,15 @@
 
   ### 3. **Advanced Features and Optimization:**
   - Developed a full stack web application for course recommendations based on past sprints, utilizing self designed APIs (Sprint 6).
-  - Implemented course prerequisite graphs, dark mode, included and optimized website performance; established a CI/CD pipeline for continuous integration and testing (Sprint 8 & 9).
+  - Implemented course prerequisite graphs and trees using Vis.js (Sprint 8).
+  - Implemented dark mode, included and optimized website performance; established a CI/CD pipeline for continuous integration and testing (Sprint 8 & 9).
 
      ## Directory Structure Info:
   - *parser*: This directory contains python script to parse the data from txt file. Detailed info is in the README inside parser directory. Watch Demo to see how it works.
   - *searcher*: This directory contains the python script to perform search based on different criteria after parsing. Detailed info in the README in the search directtory. Wtach demo to see how it works.
   - *VBASprint2*: This directory contains the code to make make VBA UI. The UI is present in this folder. Detailed info in the README in the search directtory. Wtach demo to see how it works.
   - *sprint9*: All the final PHP, CSS scripts, detailed API and MySQL documentaion, Selenium Tests are written in this directory.
-  
+
   *Note*: "All_course_Tree.side" will take around 2-3 min Safari to work and 5 min to work on Chrome as the script has to go through all the data ses and make connections and generate trees and graphs. In the demo the waiting part is skipped for the demo purposes.
      
 # Setting up MySQL, PHP, and NGINX on MacOS
