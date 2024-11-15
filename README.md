@@ -1,4 +1,4 @@
-- Link to website: [EduGraph](http://34.201.123.35/) 
+- **Link to website:** [EduGraph](http://34.201.123.35/) 
   - *NOTE*: The above link may not work in the future. I may terminate the deployment on AWS depending on the resource consumption as I have acount with basic plan only on AWS.
 - **Link to Demo Videos**: [DEMO VIDEOS](https://github.com/Simar710/EduGraph/blob/main/Demo_Videos/demo_videos.md)
   
