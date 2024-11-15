@@ -6,5 +6,5 @@
     - brew install node
     - npm install -g selenium-side-runner
 - Back to your terminal, run "selenium-side-runner Sprint7.side"
-
+- "All_course_Tree.side" will take around 2-3 min Safari to work and 5 min to work on Chrome as the script has to go through all the data ses and make connections and generate trees and graphs.
 The test cases will run.

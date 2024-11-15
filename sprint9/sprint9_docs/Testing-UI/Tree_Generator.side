@@ -23,7 +23,7 @@
     }, {
       "id": "5348ffc9-d081-4b53-bb52-6787a56a7057",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -38,7 +38,7 @@
     }, {
       "id": "ab41cbd4-ef70-411f-bb17-19e19b962cce",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
@@ -140,7 +140,7 @@
     }, {
       "id": "bffaaf05-3ffc-4a84-a17e-6449bca81c9e",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -197,7 +197,7 @@
     }, {
       "id": "455ba400-d25f-4829-ae98-e44c60067993",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["css=#genTreeBtn > .btn", "css:finder"],
@@ -258,7 +258,7 @@
     }, {
       "id": "0e936a58-e4de-44ee-802d-6bd420809de4",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -273,7 +273,7 @@
     }, {
       "id": "bee94046-cfc9-48ed-9ccf-c83533e909d7",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
@@ -334,7 +334,7 @@
     }, {
       "id": "9dde3e24-e1c9-47f7-86e4-001c1ec5eebe",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "id=searchInput",
       "targets": [
         ["id=searchInput", "id"],
@@ -410,7 +410,7 @@
     }, {
       "id": "d2b897e0-9946-4851-bf85-77ab62146a22",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -425,7 +425,7 @@
     }, {
       "id": "03dc8f71-3a23-46b0-b08f-efe95e6e4842",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],
@@ -483,7 +483,7 @@
     }, {
       "id": "dc865117-5400-4e18-bb32-c36c0c468619",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "xpath=//a[contains(text(),'Start Now!')]",
       "targets": [
         ["linkText=Start Now!", "linkText"],
@@ -498,7 +498,7 @@
     }, {
       "id": "dda901b3-f3f3-45fc-91c0-7d11b1fe1f61",
       "comment": "",
-      "command": "click",
+      "command": "doubleClick",
       "target": "css=#genTreeBtn > .btn",
       "targets": [
         ["linkText=Generate Course Tree", "linkText"],

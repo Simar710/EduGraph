@@ -1,22 +1,40 @@
 # Intro and Set Up on local and on AWS.
-### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch have changes from sprint 9 only.
+### Have a look at other branches as well for progressive development of the project. The branches are named as sprint1, sprint2,... There were 9 sprints. All the sprints have their particular tasks and description. The main branch should have the final set up and all the necessary info.
+
 ### Project: EduGraph
 
    ### Summary:
-   -   Created a web application with team.
-   -   Parsed the data into csv using python, developed a Python-based CLI and Excel UI using VBA.
-   -   Stored the data in a MySQL database and architect the PHP REST APIs, featuring PHP web applications for course recommendations, prerequisite graphs, hosted using Nginx and a CI/CD pipeline for enhanced functionality and reliability.
+   -   Created a full stack web application.
+   -   Parsed the data into csv using python, developed a Python-based CLI and Excel UI using VBA scripts.
+   -   Designed and Stored the data in a MySQL database.
+   -   Architect the PHP REST APIs, establishing secure HTTP protocols for data exchanges between the client and server, featuring PHP full stack web applications for course recommendations,
+   -   Vis.js is used to generate graphs and trees.
+   -   Application is hosted using Nginx in AWS EC2 Instance as well as on local enviroment
+   -   CI/CD pipeline is also set up using GitHub Action for GitHub and Gitlab CI/CD for Gitlab, with proper testing.
+   -   Created and executed detailed test plans using TDD principles and Selenium for front-end automation.
+   -   Implemented accessibility features (keyboard navigation, high-contrast theme) and ensured WCAG 2.1 compliance.
+   -   Later on the whole application was configured to work AWS EC2 Instance. Details to setup on both, local and AWS, are mentioned in sections below.
+
   ### 1. **Course Data Management:**
-     - Developed a Python-based CLI for parsing and searching course information, generating Excel outputs, and documenting sprint progress (Sprint 1 & 2).
-     - Designed an Excel UI with VBA scripts to assess student eligibility for courses based on completed coursework (Sprint 2).
+  - Developed a Python-based CLI for parsing and searching course information, generating Excel outputs, and documenting sprint progress (Sprint 1 & 2).
+  - Designed an Excel UI with VBA scripts to assess student eligibility for courses based on completed coursework (Sprint 2).
 
   ### 2. **Web and Database Integration:**
-     - Created a web interface for downloading course data and viewing team member pages; enhanced with a MySQL database and PHP REST API for course data manipulation (Sprint 3 & 4).
-     - Improved API endpoints, refactored code, and enhanced UI responsiveness and accessibility using Bootstrap; implemented automated testing (Sprint 5 & 7).
+  - Created a web interface for downloading course data and viewing team member pages; enhanced with a MySQL database and PHP REST API for course data manipulation (Sprint 3 & 4).
+  - Improved API endpoints, refactored code, and enhanced UI responsiveness and accessibility using Bootstrap; implemented automated testing (Sprint 5 & 7).
 
   ### 3. **Advanced Features and Optimization:**
-     - Developed a web application for course recommendations based on past coursework, utilizing external APIs (Sprint 6).
-     - Implemented course prerequisite graphs, dark mode, and optimized website performance; established a CI/CD pipeline for continuous integration and testing (Sprint 8 & 9).
+  - Developed a full stack web application for course recommendations based on past sprints, utilizing self designed APIs (Sprint 6).
+  - Implemented course prerequisite graphs and trees using Vis.js (Sprint 8).
+  - Implemented dark mode, included and optimized website performance; established a CI/CD pipeline for continuous integration and testing (Sprint 8 & 9).
+
+     ## Directory Structure Info:
+  - *parser*: This directory contains python script to parse the data from txt file. Detailed info is in the README inside parser directory. Watch Demo to see how it works.
+  - *searcher*: This directory contains the python script to perform search based on different criteria after parsing. Detailed info in the README in the search directtory. Wtach demo to see how it works.
+  - *VBASprint2*: This directory contains the code to make make VBA UI. The UI is present in this folder. Detailed info in the README in the search directtory. Wtach demo to see how it works.
+  - *sprint9*: All the final PHP, CSS scripts, detailed API and MySQL documentaion, Selenium Tests are written in this directory.
+
+  *Note*: "All_course_Tree.side" will take around 2-3 min Safari to work and 5 min to work on Chrome as the script has to go through all the data ses and make connections and generate trees and graphs. In the demo the waiting part is skipped for the demo purposes.
      
 # Setting up MySQL, PHP, and NGINX on MacOS
 ### Note: YOU NEED HOMEBREW FOR ALL OF THIS
